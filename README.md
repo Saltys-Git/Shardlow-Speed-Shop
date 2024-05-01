@@ -10,6 +10,7 @@ A Wheel &amp; Rim Repair Service in Shardlow, Derby DE72 2HL, United Kingdom
 |2|[`Initial Folder Structure`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#initial-folder-structure)|
 |3|[`Menu Structure`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#menu-structure)|
 |4|[`Referenses`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#referenses)|
+|4|[`Branch Details`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#branch-details)|
 
 
 # Tech Stack
@@ -118,4 +119,12 @@ A Wheel &amp; Rim Repair Service in Shardlow, Derby DE72 2HL, United Kingdom
 * [TypeScript Style Guide from Google](https://google.github.io/styleguide/tsguide.html)
 * [MoodBoard Site 1](https://www.awrswheelrepair.com)
 * [MoodBoard Site 2](https://wheelsonsite.com/)
-* 
+* [UI Design](https://figma.com) 
+
+## Branch Details
+* main
+  >Only for deployment
+* opupal
+  >To commit on personal branch
+*siam
+  >To commit on personal branch
