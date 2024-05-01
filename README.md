@@ -1,6 +1,17 @@
 # Shardlow-Speed-Shop
 A Wheel &amp; Rim Repair Service in Shardlow, Derby DE72 2HL, United Kingdom
 
+
+**Table of Contents**
+
+|No.|Content|
+|---|-------|
+|1|[`Tech Stack`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#tech-stack)|
+|2|[`Initial Folder Structure`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#initial-folder-structure)|
+|3|[`Menu Structure`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#menu-structure)|
+|4|[`Referenses`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#referenses)|
+
+
 # Tech Stack
 
 * Language - Typescript
