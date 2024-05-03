@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import NavbarComponent from "./Navbar";
 
-const Hero = () => {
+const Hero = (//get image props, child components ) => {
   return (
     <div className="relative w-full min-h-[430px] md:min-h-dvh lg:min-h-lvh ">
       <Image
