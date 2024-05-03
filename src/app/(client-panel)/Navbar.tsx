@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
+import Image from "next/image";
+import { AlignJustify } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 const NavbarComponent = () => {
+  const [open, setOpen] = useState(false);
+
   const [activeLink, setActiveLink] = useState("Home");
 
   const menuItems = [
@@ -15,44 +19,83 @@ const NavbarComponent = () => {
 
   return (
     <>
-      <div className="border-8 border-[#C6C71D] rounded-2xl min-h-dvh m-4 sm:m-24 relative bg-[#0e0c0b] bg-opacity-50">
-        <nav className="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-24 py-6 rounded-2xl">
-          <div className="flex justify-center items-center">
-            <div>
-              <img
+      <div className="border-2 md:border-8 border-[#C6C71D] rounded-md md:rounded-2xl h-96 md:h-[760px] m-4 sm:m-24 relative bg-[#0e0c0b] bg-opacity-50 text-white p-0 md:px-10">
+        <nav>
+          <div className="flex justify-between items-center p-6 ">
+            <div className="md:flex  md:space-x-4 md:items-center">
+              <Image
                 src="/logo.png"
                 width={40}
                 height={40}
                 alt="Picture of the author"
+                className="hidden md:block"
               />
+              <h1 className="text-2xl">Our Logo</h1>
             </div>
-            <div>
-              <h1 className="text-2xl sm:text-3xl text-white capitalize px-4 sm:px-10">
-                Our Logo
-              </h1>
+            {/* this is for mobile devices */}
+            <div className="flex md:hidden">
+              <Sheet onOpenChange={setOpen} open={open}>
+                <SheetTrigger asChild>
+                  <button
+                    onClick={() => {
+                      setOpen(true);
+                      console.log(open);
+                    }}
+                  >
+                    {/* <AlignJustify color="#C6C71D" /> */}
+                    click
+                  </button>
+                </SheetTrigger>
+                <SheetContent className="bg-[#222121]">
+                  {menuItems.map((item, idx) => (
+                    <Link href={item.path} className="py-2">
+                      {item.name}
+                    </Link>
+                  ))}
+                </SheetContent>
+              </Sheet>
             </div>
-          </div>
-          <div className="mt-4 sm:mt-0">
-            <ul className="flex flex-col sm:flex-row text-white text-lg font-extralight gap-4 sm:gap-10">
-              {menuItems.map((item) => (
-                <li
-                  key={item.name}
-                  className={
-                    activeLink === item.name ? "underline text-[#C6C71D]" : ""
-                  }
-                  onClick={() => setActiveLink(item.name)}
-                >
-                  <Link href={item.path}>{item.name}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <Button className="bg-[#C6C71D] text-lg sm:text-2xl px-4 sm:px-6 py-2 sm:py-3 rounded-xl mt-4 sm:mt-0">
-              Get A Quote
-            </Button>
+
+            {/* this is for large screens */}
+            <div className="hidden md:flex">
+              <ul className="flex justify-center items-center space-x-8">
+                {menuItems.map((item, idx) => (
+                  <li
+                    key={idx}
+                    onClick={() => setActiveLink(item.name)}
+                    className={`text-xl font-extralight  ${
+                      activeLink === item.name
+                        ? "text-[#C6C71D] underline"
+                        : "text-white"
+                    }`}
+                  >
+                    <Link href={item.path}>{item.name}</Link>
+                  </li>
+                ))}
+                <Button className="bg-[#C6C71D] text-lg rounded-xl px-10 font-semibold">
+                  Get a Quote
+                </Button>
+              </ul>
+            </div>
           </div>
         </nav>
+
+        <div className="px-5 my-0 md:my-20   w-full md:w-1/2">
+          <h1 className="text-[#C6C71D] text-3xl md:text-8xl leading-snug w-2/3">
+            Trust Us To Repair Your
+            <span className="text-white"> WHEELS.</span>
+          </h1>
+          <p className="text-[14px] md:text-xl  font-extralight leading-snug py-2 ">
+            The wheel repair experts. WheelsOnsite® brings high quality mobile
+            wheel and rim repair directly to you.
+          </p>
+          <Button
+            variant={"outline"}
+            className="bg-transparent border-[#a3a325] my-8 rounded-xl "
+          >
+            Get A Quote
+          </Button>
+        </div>
       </div>
     </>
   );

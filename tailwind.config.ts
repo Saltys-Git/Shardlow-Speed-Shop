@@ -19,11 +19,11 @@ const config = {
         "2xl": "1400px",
       },
     },
-    fontFamily: {
-      "helvetica-neue": ["Helvetica Neue 55", "sans-serif"],
-    },
+    fontFamily: {},
     extend: {
       colors: {
+        lime: "#a3a325",
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
