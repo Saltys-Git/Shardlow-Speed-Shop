@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Hero from "./(client-panel)/Hero";
+import Slider from "@/components/Slider";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           </Button>
         </div>
       </Hero>
+      <Slider />
       {/* wheel repair section  */}
       <section className="bg-[#2E2E1C] text-white flex justify-center md:justify-normal items-center p-10">
         <div className="p-0 md:p-24 w-full md:w-1/2">
@@ -51,7 +53,7 @@ export default function Home() {
       <section className=" w-full h-full">
         <div
           className="flex flex-col
-       justify-center items-center p-20  text-center text-white"
+       justify-center items-center p-10  text-center text-white"
         >
           <h1 className="text-xl md:text-4xl py-6">Wheel Custom Coloring</h1>
           <p className="font-extralight px-10 w-full md:w-2/3">
