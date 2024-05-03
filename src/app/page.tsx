@@ -1,9 +1,29 @@
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Hero from "./(client-panel)/Hero";
+
 export default function Home() {
   return (
     <div className="bg-[#302f2f] h-full justify-center items-center max-w-full ">
+      <Hero bgSrc={"/bg.jpg"}>
+        <div className="px-5 my-0 md:my-20   w-full md:w-1/2">
+          <h1 className="text-[#C6C71D] text-3xl md:text-8xl leading-snug w-2/3">
+            Trust Us To Repair Your
+            <span className="text-white"> WHEELS.</span>
+          </h1>
+          <p className="text-[14px] md:text-xl  font-extralight leading-snug py-2 ">
+            The wheel repair experts. WheelsOnsite® brings high quality mobile
+            wheel and rim repair directly to you.
+          </p>
+          <Button
+            variant={"outline"}
+            className="bg-transparent border-[#a3a325] my-8 rounded-xl "
+          >
+            Get A Quote
+          </Button>
+        </div>
+      </Hero>
       {/* wheel repair section  */}
       <section className="bg-[#2E2E1C] text-white flex justify-center md:justify-normal items-center p-10">
         <div className="p-0 md:p-24 w-full md:w-1/2">
