@@ -79,23 +79,6 @@ const NavbarComponent = () => {
             </div>
           </div>
         </nav>
-
-        <div className="px-5 my-0 md:my-20   w-full md:w-1/2">
-          <h1 className="text-[#C6C71D] text-3xl md:text-8xl leading-snug w-2/3">
-            Trust Us To Repair Your
-            <span className="text-white"> WHEELS.</span>
-          </h1>
-          <p className="text-[14px] md:text-xl  font-extralight leading-snug py-2 ">
-            The wheel repair experts. WheelsOnsite® brings high quality mobile
-            wheel and rim repair directly to you.
-          </p>
-          <Button
-            variant={"outline"}
-            className="bg-transparent border-[#a3a325] my-8 rounded-xl "
-          >
-            Get A Quote
-          </Button>
-        </div>
       </div>
     </>
   );
