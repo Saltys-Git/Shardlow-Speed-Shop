@@ -18,69 +18,65 @@ const NavbarComponent = () => {
   ];
 
   return (
-    <>
-      <div className="border-2 md:border-8 border-[#C6C71D] rounded-md md:rounded-2xl h-96 md:h-[760px] m-4 sm:m-24 relative bg-[#0e0c0b] bg-opacity-50 text-white p-0 md:px-10">
-        <nav>
-          <div className="flex justify-between items-center p-6 ">
-            <div className="md:flex  md:space-x-4 md:items-center">
-              <Image
-                src="/logo.png"
-                width={40}
-                height={40}
-                alt="Picture of the author"
-                className="hidden md:block"
-              />
-              <h1 className="text-2xl">Our Logo</h1>
-            </div>
-            {/* this is for mobile devices */}
-            <div className="flex md:hidden">
-              <Sheet onOpenChange={setOpen} open={open}>
-                <SheetTrigger asChild>
-                  <button
-                    onClick={() => {
-                      setOpen(true);
-                      console.log(open);
-                    }}
-                  >
-                    {/* <AlignJustify color="#C6C71D" /> */}
-                    click
-                  </button>
-                </SheetTrigger>
-                <SheetContent className="bg-[#222121]">
-                  {menuItems.map((item, idx) => (
-                    <Link href={item.path} className="py-2">
-                      {item.name}
-                    </Link>
-                  ))}
-                </SheetContent>
-              </Sheet>
-            </div>
-
-            {/* this is for large screens */}
-            <div className="hidden md:flex">
-              <ul className="flex justify-center items-center space-x-8">
-                {menuItems.map((item, idx) => (
-                  <li
-                    key={idx}
-                    onClick={() => setActiveLink(item.name)}
-                    className={`text-xl font-extralight  ${
-                      activeLink === item.name
-                        ? "text-[#C6C71D] underline"
-                        : "text-white"
-                    }`}
-                  >
-                    <Link href={item.path}>{item.name}</Link>
-                  </li>
-                ))}
-                <Button className="bg-[#C6C71D] text-lg rounded-xl px-10 font-semibold">
-                  Get a Quote
-                </Button>
-              </ul>
-            </div>
+      <nav>
+        <div className="flex justify-between items-center p-6 ">
+          <div className="md:flex  md:space-x-4 md:items-center">
+            <Image
+              src="/logo.png"
+              width={40}
+              height={40}
+              alt="Picture of the author"
+              className="hidden md:block"
+            />
+            <h1 className="text-2xl">Our Logo</h1>
           </div>
-        </nav>
-      </div>
-    </>
+          {/* this is for mobile devices */}
+          <div className="flex md:hidden">
+            <Sheet onOpenChange={setOpen} open={open}>
+              <SheetTrigger asChild>
+                <button
+                  onClick={() => {
+                    setOpen(true);
+                    console.log(open);
+                  }}
+                >
+                  {/* <AlignJustify color="#C6C71D" /> */}
+                  click
+                </button>
+              </SheetTrigger>
+              <SheetContent className="bg-[#222121]">
+                {menuItems.map((item, idx) => (
+                  <Link href={item.path} className="py-2">
+                    {item.name}
+                  </Link>
+                ))}
+              </SheetContent>
+            </Sheet>
+          </div>
+
+          {/* this is for large screens */}
+          <div className="hidden md:flex">
+            <ul className="flex justify-center items-center space-x-8">
+              {menuItems.map((item, idx) => (
+                <li
+                  key={idx}
+                  onClick={() => setActiveLink(item.name)}
+                  className={`text-xl font-extralight  ${
+                    activeLink === item.name
+                      ? "text-[#C6C71D] underline"
+                      : "text-white"
+                  }`}
+                >
+                  <Link href={item.path}>{item.name}</Link>
+                </li>
+              ))}
+              <Button className="bg-[#C6C71D] text-lg rounded-xl px-10 font-semibold">
+                Get a Quote
+              </Button>
+            </ul>
+          </div>
+        </div>
+      </nav>
   );
 };
 
