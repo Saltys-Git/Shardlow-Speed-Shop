@@ -6,7 +6,6 @@ import { AlignJustify } from "lucide-react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -32,7 +31,7 @@ const NavbarComponent = () => {
   const [activeLink, setActiveLink] = useState("Home");
 
   const menuItems = [
-    { name: "Home", path: "/home" },
+    { name: "Home", path: "/" },
     {
       name: "Wheel Repair Services",
       items: [
@@ -141,7 +140,7 @@ const NavbarComponent = () => {
               <li
                 key={idx}
                 onClick={() => setActiveLink(item.name)}
-                className={`text-xl font-extralight ${
+                className={`text-xl font-extralight hover:text-custom-primary hover:border-b-2 hover:border-custom-primary ${
                   activeLink === item.name
                     ? "text-custom-primary pb-1 border-b-2 border-custom-primary"
                     : "text-white"
@@ -154,7 +153,7 @@ const NavbarComponent = () => {
                         className="text-white   border-none"
                         value={item.name}
                       >
-                        <AccordionTrigger className="font-extralight text-xl hover:no-underline py-0">
+                        <AccordionTrigger className="font-extralight text-xl hover:no-underline py-0 hover:text-custom-primary">
                           {item.name}
                         </AccordionTrigger>
                         <AccordionContent className="absolute my-4">
@@ -180,7 +179,7 @@ const NavbarComponent = () => {
 
             <Button
               onClick={handleOpen}
-              className="bg-custom-primary text-lg rounded-xl px-10 font-semibold"
+              className="bg-custom-primary text-lg rounded-xl px-10 font-semibold hover:bg-custom-primary hover:text-white hover:underline"
             >
               Get a Quote
             </Button>

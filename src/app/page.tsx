@@ -19,7 +19,7 @@ export default function Home() {
           </p>
           <Button
             variant={"outline"}
-            className="bg-transparent border-custom-primary my-8 rounded-xl "
+            className="bg-transparent border-custom-primary my-8 rounded-xl hover:bg-custom-primary hover:text-white hover:underline"
           >
             Get A Quote
           </Button>
@@ -78,7 +78,7 @@ export default function Home() {
           <div>
             <Button
               variant={"outline"}
-              className="bg-transparent border-custom-primary my-8"
+              className="bg-transparent border-custom-primary my-8 hover:bg-custom-primary hover:text-white hover:underline"
             >
               See Our Gallery
               <ChevronRight className="border-custom-primary" size={28} />
@@ -87,8 +87,16 @@ export default function Home() {
         </div>
       </section>
       {/* Why chose us section  */}
-      <section className="bg-white  flex flex-col md:flex-row justify-center items-center p-14 space-x-8">
-        <div>
+      <section
+        className="relative bg-white text-white flex flex-col md:flex-row justify-center items-center p-14 space-x-8"
+        style={{
+          backgroundImage: "url('/bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+        <div className=" relative z-10 ">
           <Image
             src="/video.jpg"
             alt=""
@@ -98,10 +106,10 @@ export default function Home() {
           />
         </div>
         <div className="w-full md:w-1/2 px-0 md:px-20">
-          <h1 className="text-2xl md:text-4xl font-semibold my-2">
+          <h1 className="text-2xl md:text-4xl font-semibold my-2 relative z-10">
             Why Choose Shardlow Speed Shop ltd
           </h1>
-          <p className=" py-3 text-[15px] md:text-base">
+          <p className=" py-3 text-[15px] md:text-base relative z-10">
             We are the world’s largest provider of wheel refinishing, wheel
             remanufacturing and wheel replacement. All our wheel repair
             processes are thoroughly researched and evaluated. Each technician
@@ -110,7 +118,7 @@ export default function Home() {
           </p>
           <Button
             variant={"outline"}
-            className="bg-transparent border-custom-primary my-8"
+            className="bg-transparent border-custom-primary my-8 z-10 relative hover:bg-custom-primary hover:text-white hover:underline"
           >
             Find a Location
           </Button>
@@ -134,7 +142,7 @@ export default function Home() {
           <div>
             <Button
               variant={"outline"}
-              className="bg-transparent border-custom-primary my-8 rounded-2xl px-8"
+              className="bg-transparent border-custom-primary my-8 rounded-2xl px-8 hover:bg-custom-primary hover:text-white hover:underline"
             >
               Get Startet
             </Button>
