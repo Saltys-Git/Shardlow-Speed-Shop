@@ -31,6 +31,8 @@ const config = {
           primary: "#C6C71D",
           secondary: "#190202",
           bgColor: "#2D2D2D",
+          // serive
+          card: "#EAEB88",
         },
 
         border: "hsl(var(--border))",
