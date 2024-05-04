@@ -6,20 +6,20 @@ import Slider from "@/components/Slider";
 
 export default function Home() {
   return (
-    <div className="bg-[#302f2f] h-full justify-center items-center max-w-full ">
+    <div className="bg-custom-bgColor h-full justify-center items-center max-w-full ">
       <Hero bgSrc={"/bg.jpg"}>
         <div className="px-5 my-0 md:my-20   w-full md:w-1/2">
-          <h1 className="text-[#C6C71D] text-3xl md:text-8xl leading-snug w-2/3">
+          <h1 className="text-custom-primary text-3xl md:text-8xl leading-snug w-2/3 font-Oswald">
             Trust Us To Repair Your
             <span className="text-white"> WHEELS.</span>
           </h1>
-          <p className="text-[14px] md:text-xl  font-extralight leading-snug py-2 ">
+          <p className="text-xs md:text-xl leading-snug py-2 tracking-wide">
             The wheel repair experts. WheelsOnsite® brings high quality mobile
             wheel and rim repair directly to you.
           </p>
           <Button
             variant={"outline"}
-            className="bg-transparent border-[#a3a325] my-8 rounded-xl "
+            className="bg-transparent border-custom-primary my-8 rounded-xl "
           >
             Get A Quote
           </Button>
@@ -27,10 +27,20 @@ export default function Home() {
       </Hero>
       <Slider />
       {/* wheel repair section  */}
-      <section className="bg-[#2E2E1C] text-white flex justify-center md:justify-normal items-center p-10">
-        <div className="p-0 md:p-24 w-full md:w-1/2">
-          <h1 className="text-2xl md:text-4xl my-8 ">Wheel Repair Services</h1>
-          <p className="font-extralight py-3">
+      <section
+        className="relative bg-custom-bgColor text-white flex justify-center md:justify-normal items-center p-10"
+        style={{
+          backgroundImage: "url('/bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-70"></div>
+        <div className="p-0 md:p-24 w-full md:w-1/2 relative z-10">
+          <h1 className="text-[26px] md:text-6xl my-8  ">
+            Wheel Repair Services
+          </h1>
+          <p className="text-[10px] md:text-base py-3 text-default-300">
             It won’t always be possible to repair damaged wheels and maintain
             vehicle safety. But thanks to OEM replacements, there’s no need to
             worry. Alloy Wheel Repair Specialists stocks a wide selection of OEM
@@ -45,7 +55,7 @@ export default function Home() {
           </p>
           <button className="flex">
             Shop OEM Wheels
-            <ChevronRight className="text-[#a3a325]" size={28} />
+            <ChevronRight className="text-custom-primary" size={28} />
           </button>
         </div>
       </section>
@@ -55,8 +65,10 @@ export default function Home() {
           className="flex flex-col
        justify-center items-center p-10  text-center text-white"
         >
-          <h1 className="text-xl md:text-4xl py-6">Wheel Custom Coloring</h1>
-          <p className="font-extralight px-10 w-full md:w-2/3">
+          <h1 className="text-[25px] md:text-4xl py-6">
+            Wheel Custom Coloring
+          </h1>
+          <p className="font-extralight text-[15px] px-10 w-full md:w-2/3 md:text-base">
             Restore your wheels to their original condition or choose a custom
             finish with our wheel custom coloring service. Powder coating offers
             a durable finish that will protect your rims, and custom painting
@@ -66,10 +78,10 @@ export default function Home() {
           <div>
             <Button
               variant={"outline"}
-              className="bg-transparent border-[#a3a325] my-8"
+              className="bg-transparent border-custom-primary my-8"
             >
               See Our Gallery
-              <ChevronRight className="text-[#a3a325]" size={28} />
+              <ChevronRight className="border-custom-primary" size={28} />
             </Button>
           </div>
         </div>
@@ -89,7 +101,7 @@ export default function Home() {
           <h1 className="text-2xl md:text-4xl font-semibold my-2">
             Why Choose Shardlow Speed Shop ltd
           </h1>
-          <p className=" py-3">
+          <p className=" py-3 text-[15px] md:text-base">
             We are the world’s largest provider of wheel refinishing, wheel
             remanufacturing and wheel replacement. All our wheel repair
             processes are thoroughly researched and evaluated. Each technician
@@ -98,7 +110,7 @@ export default function Home() {
           </p>
           <Button
             variant={"outline"}
-            className="bg-transparent border-[#a3a325] my-8"
+            className="bg-transparent border-custom-primary my-8"
           >
             Find a Location
           </Button>
@@ -110,8 +122,10 @@ export default function Home() {
           className="flex flex-col
        justify-center items-center p-8 text-center text-white"
         >
-          <h1 className="text-xl md:text-4xl py-6">Schedule An Appointment</h1>
-          <p className="font-extralight w-full md:w-2/3 ">
+          <h1 className="text-[25px] md:text-4xl py-6">
+            Schedule An Appointment
+          </h1>
+          <p className="font-extralight w-full md:w-2/3  text-[15px] md:text-base">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
             corrupti corporis nesciunt? Aliquam, velit tempora. Harum
             praesentium deserunt illo ex quia eos ab commodi nemo quaerat,
@@ -120,7 +134,7 @@ export default function Home() {
           <div>
             <Button
               variant={"outline"}
-              className="bg-transparent border-[#a3a325] my-8 rounded-2xl px-8"
+              className="bg-transparent border-custom-primary my-8 rounded-2xl px-8"
             >
               Get Startet
             </Button>

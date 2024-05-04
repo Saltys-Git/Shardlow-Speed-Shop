@@ -82,7 +82,7 @@ const NavbarComponent = () => {
             <SheetTrigger>
               <AlignJustify color="#C6C71D" />
             </SheetTrigger>
-            <SheetContent className="bg-[#302f2f] text-white">
+            <SheetContent className="bg-custom-bgColor text-white">
               <SheetHeader className="text-xl py-5 text-start">
                 Shardlow Speed Shop
               </SheetHeader>
@@ -125,7 +125,7 @@ const NavbarComponent = () => {
               <SheetFooter>
                 <Button
                   onClick={handleOpen}
-                  className="bg-[#C6C71D] text-lg rounded-xl px-10 font-semibold mt-5"
+                  className="bg-custom-primary text-lg rounded-xl px-10 font-semibold mt-5"
                 >
                   Get a Quote
                 </Button>
@@ -143,7 +143,7 @@ const NavbarComponent = () => {
                 onClick={() => setActiveLink(item.name)}
                 className={`text-xl font-extralight ${
                   activeLink === item.name
-                    ? "text-[#C6C71D] pb-1 border-b-2 border-[#C6C71D]"
+                    ? "text-custom-primary pb-1 border-b-2 border-custom-primary"
                     : "text-white"
                 }`}
               >
@@ -180,7 +180,7 @@ const NavbarComponent = () => {
 
             <Button
               onClick={handleOpen}
-              className="bg-[#C6C71D] text-lg rounded-xl px-10 font-semibold"
+              className="bg-custom-primary text-lg rounded-xl px-10 font-semibold"
             >
               Get a Quote
             </Button>

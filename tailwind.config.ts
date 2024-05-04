@@ -1,4 +1,6 @@
 import { nextui } from "@nextui-org/theme";
+import { Oswald } from "next/font/google";
+
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -8,7 +10,7 @@ const config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|card|dropdown|link|modal|navbar|ripple|spinner|menu|divider|popover).js"
+    "./node_modules/@nextui-org/theme/dist/components/(button|card|dropdown|link|modal|navbar|ripple|spinner|menu|divider|popover).js",
   ],
   prefix: "",
   theme: {
@@ -19,10 +21,17 @@ const config = {
         "2xl": "1400px",
       },
     },
-    fontFamily: {},
+    fontFamily: {
+      Oswald: "Oswald",
+      sans: ["Helvetica Neue", "sans-serif"],
+    },
     extend: {
       colors: {
-        lime: "#a3a325",
+        custom: {
+          primary: "#C6C71D",
+          secondary: "#190202",
+          bgColor: "#2D2D2D",
+        },
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

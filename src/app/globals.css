@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* font   */
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue");
+
 @layer base {
   :root {
     --background: 0 0% 100%;

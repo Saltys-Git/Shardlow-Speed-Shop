@@ -39,15 +39,15 @@ const Slider = () => {
 
   return (
     <section className=" flex flex-col relative">
-      <h1 className="text-xl text-white md:text-4xl font-semibold text-center pt-10 ">
+      <h1 className=" text-white text-[22px] md:text-4xl text-center pt-10 ">
         Alloy Wheel Repair Specialists
       </h1>
       <div className="px-14 pb-10">
-        <div className="flex justify-end text-[#bebe23] my-5 space-x-4 md:hidden">
-          <span className=" bg-white border-[#bebe23] ">
+        <div className="flex justify-end text-custom-primary my-5 space-x-4 md:hidden">
+          <span className=" bg-white border-custom-primary ">
             <ChevronLeft onClick={goToPrevSlide} />
           </span>
-          <span className=" bg-white border-[#bebe23]">
+          <span className=" bg-white border-custom-primary">
             <ChevronRight onClick={goToNextSlide} />
           </span>
         </div>
@@ -72,7 +72,7 @@ const Slider = () => {
               </p>
               <Link
                 href={"/"}
-                className="text-[#bebe23] border-b border-[#bebe23]"
+                className="text-custom-primary border-b border-custom-primary"
               >
                 Learn More
               </Link>

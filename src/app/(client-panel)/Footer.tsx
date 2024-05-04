@@ -40,7 +40,7 @@ const Footer = () => {
           <span className="text-xl sm:text-3xl">Shardlow Speed Shop</span>
         </div>
         <div>
-          <h1 className="py-2 text-sm  sm:text-xl text-[#a3a325] text-nowrap">
+          <h1 className="py-2 text-sm  sm:text-xl text-custom-primary text-nowrap">
             Wheel Repair Service
           </h1>
           <ul>
@@ -53,7 +53,7 @@ const Footer = () => {
               </li>
             ))}
           </ul>
-          <h1 className="py-2 text-sm sm:text-xl text-[#a3a325] text-nowrap">
+          <h1 className="py-2 text-sm sm:text-xl text-custom-primary text-nowrap">
             Wheel Custom Coloring
           </h1>
           <p className="text-[10px] sm:text-base py-1 text-nowrap">
@@ -110,7 +110,7 @@ const Footer = () => {
             placeholder="Email Address"
             className="bg-gray-100 text-[10px] sm:text-base p-1  text-black rounded-xl"
           />
-          <button className="text-[10px] sm:text-base bg-transparent border border-[#a3a325] my-2 p-1 rounded-lg">
+          <button className="text-[10px] sm:text-base bg-transparent border border-custom-primary my-2 p-1 rounded-lg">
             Subscribe
           </button>
         </div>
