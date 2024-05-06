@@ -9,7 +9,7 @@ export default function Home() {
     <div className="bg-custom-bgColor h-full justify-center items-center max-w-full ">
       <Hero bgSrc={"/bg.jpg"}>
         <div className="px-5 my-0 sm:my-20   w-full sm:w-1/2">
-          <h1 className="text-custom-primary text-3xl sm:text-8xl leading-snug w-2/3 font-Oswald">
+          <h1 className="text-custom-primary text-3xl sm:text-[88px] leading-snug w-2/3 font-heading font-head tracking-wide">
             Trust Us To Repair Your
             <span className="text-white"> WHEELS.</span>
           </h1>
@@ -37,10 +37,10 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="p-0 sm:p-24 w-full sm:w-1/2 relative z-10">
-          <h1 className="text-[26px] sm:text-6xl my-8  ">
+          <h1 className="font-primary text-[26px] sm:text-[62px] my-8 font-head tracking-wide">
             Wheel Repair Services
           </h1>
-          <p className="text-[10px] sm:text-base py-3 text-default-300">
+          <p className="text-[10px] sm:text-[18px] py-3 text-default-300">
             It won’t always be possible to repair damaged wheels and maintain
             vehicle safety. But thanks to OEM replacements, there’s no need to
             worry. Alloy Wheel Repair Specialists stocks a wide selection of OEM
@@ -65,10 +65,10 @@ export default function Home() {
           className="flex flex-col
        justify-center items-center p-10  text-center text-white"
         >
-          <h1 className="text-[25px] sm:text-4xl py-6">
+          <h1 className="text-[25px] sm:text-4xl py-6 font-head tracking-wide">
             Wheel Custom Coloring
           </h1>
-          <p className="font-extralight text-[15px] px-10 w-full sm:w-2/3 sm:text-base">
+          <p className="text-[15px] px-10 w-full sm:w-2/3 sm:text-base">
             Restore your wheels to their original condition or choose a custom
             finish with our wheel custom coloring service. Powder coating offers
             a durable finish that will protect your rims, and custom painting
@@ -106,10 +106,10 @@ export default function Home() {
           />
         </div>
         <div className="w-full sm:w-1/2 px-0 sm:px-20">
-          <h1 className="text-2xl sm:text-4xl font-semibold my-2 relative z-10">
+          <h1 className="text-[22px] sm:text-[52px] font-head tracking-widemy-2 relative z-10 ">
             Why Choose Shardlow Speed Shop ltd
           </h1>
-          <p className=" py-3 text-[15px] sm:text-base relative z-10">
+          <p className=" py-8 text-[15px] sm:text-[20px] relative z-10">
             We are the world’s largest provider of wheel refinishing, wheel
             remanufacturing and wheel replacement. All our wheel repair
             processes are thoroughly researched and evaluated. Each technician
@@ -128,12 +128,12 @@ export default function Home() {
       <section className=" w-full h-full">
         <div
           className="flex flex-col
-       justify-center items-center p-8 text-center text-white"
+       justify-center items-center p-8 sm:py-20 text-center text-white"
         >
-          <h1 className="text-[25px] sm:text-4xl py-6">
+          <h1 className="text-[25px] sm:text-[62px] py-6 sm:py-10 font-head tracking-wide">
             Schedule An Appointment
           </h1>
-          <p className="font-extralight w-full sm:w-2/3  text-[15px] sm:text-base">
+          <p className=" w-full sm:w-2/3  text-[15px] sm:text-[20px]">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
             corrupti corporis nesciunt? Aliquam, velit tempora. Harum
             praesentium deserunt illo ex quia eos ab commodi nemo quaerat,

@@ -17,10 +17,10 @@ const wheelRepairServices: React.FC = () => {
       <div className="bg-custom-bgColor h-full justify-center items-center max-w-full ">
         <Hero bgSrc={"/bg.jpg"}>
           <div className="px-2 sm:px-5 text-center text-white my-0 sm:my-20 w-full italic">
-            <h1 className="text-[11px] sm:text-[50px] leading-snug w-full  sm:py-5">
-              Our Wheel Repair Specialists Make Your Rims Look as Good as New{" "}
+            <h1 className="text-[13px] sm:text-[62px] font-head tracking-wide w-full sm:py-5">
+              Our Wheel Repair Specialists Make Your Rims Look as Good as New
             </h1>
-            <h1 className=" text-custom-primary text-[8.5px] sm:text-[38px] leading-snug w-full  ">
+            <h1 className=" text-custom-primary text-[11px] sm:text-[38px] leading-snug w-full font-head ">
               {" "}
               We make cracks, scuffs and chips disappear in our wheel repair
               shop every day.
@@ -36,6 +36,7 @@ const wheelRepairServices: React.FC = () => {
         />
         {/* animated card  */}
         <HoverCard
+          heading="Wheel Repair Service"
           cardData={[
             {
               image: "/dump.png",

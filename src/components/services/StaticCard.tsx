@@ -15,7 +15,7 @@ interface StaticCardProps {
 const StaticCard: FC<StaticCardProps> = ({ title, cardData }) => {
   return (
     <section className="sm:px-[195px] sm:pt-[105px]">
-      <h1 className="text-[18px] sm:text-[62px] font-medium  text-white py-10 sm:py-0 sm:pb-[57px] tracking-tight text-center">
+      <h1 className="text-[18px] sm:text-[62px] text-white py-10 sm:py-0 sm:pb-[57px] font-head tracking-wide text-center">
         {title}
       </h1>
       <div className="px-10 ">

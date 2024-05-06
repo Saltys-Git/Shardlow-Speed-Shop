@@ -10,9 +10,10 @@ interface CardData {
 
 interface HoverCardProps {
   cardData: CardData[];
+  heading: string; // New heading prop
 }
 
-const HoverCard: React.FC<HoverCardProps> = ({ cardData }) => {
+const HoverCard: React.FC<HoverCardProps> = ({ cardData, heading }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNextSlide = () => {
@@ -29,8 +30,8 @@ const HoverCard: React.FC<HoverCardProps> = ({ cardData }) => {
 
   return (
     <section className="pt-10 sm:pt-[144px] px-5 sm:px-[170px]">
-      <h1 className="text-[30px] sm:text-[62px]  text-center font-medium text-white py-5 sm:py-0 sm:pb-[57px] tracking-tight">
-        Wheel Repair Service
+      <h1 className="text-[30px] sm:text-[62px]  text-center  text-white py-5 sm:py-0 sm:pb-[57px] tracking-wide font-head">
+        {heading}
       </h1>
       <div className="flex justify-end text-custom-primary my-5 space-x-4 sm:hidden">
         <span className=" bg-white border-custom-primary ">

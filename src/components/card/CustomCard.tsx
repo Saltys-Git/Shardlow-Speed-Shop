@@ -22,7 +22,9 @@ const CustomCard: React.FC<CustomCardProps> = ({
     <div className="flex justify-center items-center">
       <Card className="p-1 sm:p-10 sm:w-[490px] sm:h-[582px] bg-[#EBEBD4]">
         <CardHeader className="items-start">
-          <h4 className="font-bold text-[25px] sm:text-[42px]">{title}</h4>
+          <h4 className="font-head tracking-wide italic text-[25px] sm:text-[42px]">
+            {title}
+          </h4>
         </CardHeader>
         <CardBody className="overflow-visible sm:py-5 sm:min-w-[393px] sm:h-[185px] border flex items-center">
           <Image

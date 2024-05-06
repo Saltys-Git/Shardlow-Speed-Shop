@@ -17,7 +17,7 @@ const wheelCustomColoring = () => {
       <div className="bg-custom-bgColor h-full justify-center items-center max-w-full ">
         <Hero bgSrc={"/bg.jpg"}>
           <div className="px-2 sm:px-5 text-center text-white my-0 sm:my-20 w-full italic">
-            <h1 className="text-[11px] sm:text-[50px] leading-snug w-full  sm:py-5">
+            <h1 className="text-[13px] sm:text-[62px] font-head tracking-wide w-full sm:py-5">
               Professional Wheel Custom Coloring – The Finest Rim Painting &
               Powder Coating
             </h1>
@@ -38,6 +38,7 @@ const wheelCustomColoring = () => {
         />
         {/* animated card  */}
         <HoverCard
+          heading="Wheel Custom Coloring"
           cardData={[
             {
               image: "/dump.png",

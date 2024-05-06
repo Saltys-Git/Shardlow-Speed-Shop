@@ -22,7 +22,7 @@ const SectionFour: FC<SectionFourProps> = ({
     <section className="text-white py-10 sm:py-0 sm:pt-[139px] flex flex-col sm:flex-row text-left sm:items-center">
       <div className="w-full sm:w-[1500px] py-10 h-full sm:h-[740px] flex flex-col sm:justify-center sm:items-center">
         <div className="w-full sm:w-2/3 px-5 sm:px-0 text-center animate-slide-in sm:text-left ">
-          <h1 className="text-[24px] sm:text-[55px] font-medium italic sm:text-4xl py-5 sm:py-0 text-start  sm:leading-[4.5rem] text-balance">
+          <h1 className="text-[24px] sm:text-[55px] italic sm:text-4xl py-5 sm:py-0 text-start  sm:leading-[4.5rem] font-head tracking-wide">
             {title}
           </h1>
 

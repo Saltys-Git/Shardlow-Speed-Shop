@@ -1,5 +1,4 @@
 import { nextui } from "@nextui-org/theme";
-import { Oswald } from "next/font/google";
 
 import type { Config } from "tailwindcss";
 
@@ -22,10 +21,13 @@ const config = {
       },
     },
     fontFamily: {
-      Oswald: "Oswald",
       sans: ["Helvetica Neue"],
+      head: ["Oswald"],
     },
     extend: {
+      fontFamily: {
+        head: "Oswald",
+      },
       colors: {
         custom: {
           primary: "#C6C71D",

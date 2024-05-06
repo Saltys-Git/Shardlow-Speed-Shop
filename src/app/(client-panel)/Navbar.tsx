@@ -27,6 +27,7 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@nextui-org/react";
+import { Separator } from "@/components/ui/separator";
 const NavbarComponent = () => {
   const [activeLink, setActiveLink] = useState("Home");
 
@@ -190,44 +191,79 @@ const NavbarComponent = () => {
             >
               Get a Quote
             </Button>
-            <Modal backdrop={backdrop} isOpen={isOpen} onClose={onClose}>
-              <ModalContent>
+            <Modal
+              backdrop={backdrop}
+              isOpen={isOpen}
+              onClose={onClose}
+              size="3xl"
+            >
+              <ModalContent className="p-10">
                 {(onClose) => (
                   <>
-                    <ModalHeader className="flex flex-col gap-1">
-                      Modal Title
+                    <ModalHeader className="text-[16px] sm:text-[25px] text-center font-medium">
+                      Give us a call at{" "}
+                      <span className="text-custom-primary px-1">
+                        1-800-987-6674
+                      </span>
+                      , or fill out the form below.
                     </ModalHeader>
+
                     <ModalBody>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nullam pulvinar risus non risus hendrerit venenatis.
-                        Pellentesque sit amet hendrerit risus, sed porttitor
-                        quam.
-                      </p>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nullam pulvinar risus non risus hendrerit venenatis.
-                        Pellentesque sit amet hendrerit risus, sed porttitor
-                        quam.
-                      </p>
-                      <p>
-                        Magna exercitation reprehenderit magna aute tempor
-                        cupidatat consequat elit dolor adipisicing. Mollit dolor
-                        eiusmod sunt ex incididunt cillum quis. Velit duis sit
-                        officia eiusmod Lorem aliqua enim laboris do dolor
-                        eiusmod. Et mollit incididunt nisi consectetur esse
-                        laborum eiusmod pariatur proident Lorem eiusmod et.
-                        Culpa deserunt nostrud ad veniam.
-                      </p>
+                      <Separator />
+                      <ul>
+                        <li className="flex items-center py-5 text-[16px] sm:text-2xl">
+                          <span className="mr-6  border px-2 rounded-full bg-custom-primary">
+                            1
+                          </span>
+                          About You
+                        </li>
+                        <li className="flex items-center py-5 text-[16px] sm:text-2xl">
+                          <span className="mr-6  border px-2 rounded-full bg-custom-primary">
+                            2
+                          </span>
+                          About Your Vehicle
+                        </li>{" "}
+                        <li className="flex items-center py-5 text-[16px] sm:text-2xl">
+                          <span className="mr-6  border px-2 rounded-full bg-custom-primary">
+                            3
+                          </span>
+                          The Damage
+                        </li>{" "}
+                        <li className="flex items-center py-5 text-[16px] sm:text-2xl">
+                          <span className="mr-6  border px-2 rounded-full bg-custom-primary">
+                            4
+                          </span>
+                          Submit Request
+                        </li>
+                      </ul>{" "}
+                      <Separator />
                     </ModalBody>
-                    <ModalFooter>
-                      <Button
-                        color="danger"
-                        variant="outline"
-                        onClick={onClose}
-                      >
-                        Close
-                      </Button>
+                    <ModalFooter className="flex justify-start flex-col">
+                      <div>
+                        <h1 className="text-[16px] sm:text-[25px]">
+                          Tell Us About You
+                        </h1>
+                        <select
+                          className="bg-[#EBEBD4] text-black w-full rounded-lg p-2 my-5"
+                          defaultValue=""
+                        >
+                          <option disabled value="">
+                            I'm a
+                          </option>
+                          <option value="Option 1">Option 1</option>
+                          <option value="Option 2">Option 2</option>
+                          <option value="Option 3">Option 3</option>
+                        </select>
+                      </div>
+                      <div>
+                        <Button
+                          color="danger"
+                          variant="outline"
+                          className="px-8 py-2 sm:text-[18px] bg-custom-primary rounded-2xl hover:border-custom-primary hover:bg-transparent hover:text-custom-primary hover:underline tracking-wider"
+                        >
+                          Next
+                        </Button>
+                      </div>
                     </ModalFooter>
                   </>
                 )}

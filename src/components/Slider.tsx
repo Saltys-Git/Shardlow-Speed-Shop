@@ -39,7 +39,7 @@ const Slider = () => {
 
   return (
     <section className=" flex flex-col relative">
-      <h1 className=" text-white text-[22px] sm:text-4xl text-center pt-10 ">
+      <h1 className=" text-white text-[22px] sm:text-[62px] text-center pt-10 font-head tracking-wide ">
         Alloy Wheel Repair Specialists
       </h1>
       <div className="px-14 pb-10">
@@ -64,7 +64,7 @@ const Slider = () => {
               />
             </CardBody>
             <CardFooter className="flex flex-col items-start">
-              <b className="text-2xl font-semibold">
+              <b className="text-2xl font-head tracking-wide">
                 {list[currentIndex].title}
               </b>
               <p className="text-default-500 py-1 text-sm text-left">
@@ -100,7 +100,9 @@ const Slider = () => {
                 />
               </CardBody>
               <CardFooter className="flex flex-col items-start">
-                <b className="text-3xl font-semibold">{item.title}</b>
+                <b className="text-3xl  font-head tracking-wide">
+                  {item.title}
+                </b>
                 <p className="text-default-500 py-2 text-left">{item.desc}</p>
               </CardFooter>
             </Card>

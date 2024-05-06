@@ -35,8 +35,8 @@ const socialMediaLinks = [
 const Footer = () => {
   return (
     <section className="bg-white sm:bg-[#EBEBD4] py-14">
-      <div className="container">
-        <div className="flex py-3 space-x-3 items-center">
+      <div className="container mx-auto ">
+        <div className="flex py-3 space-x-3 items-center ">
           <div>
             <Image
               src={"/logo.png"}
@@ -46,44 +46,47 @@ const Footer = () => {
               className="sm:w-10 rounded-lg"
             />
           </div>
-          <div className="text-[28px] sm:text-[50px] ">Shardlow Speed Shop</div>
+          <div className="text-[28px] sm:text-[50px] font-head tracking-wide ">
+            Shardlow Speed Shop
+          </div>
         </div>
-        <div className="flex flex-col sm:flex-row justify-around items-start sm:space-x-10">
-          <div className="flex justify-around items-start  w-full h-full">
-            <div>
-              <h1 className="py-2 text-[20px] sm:text-[32px] text-custom-primary text-nowrap">
+        <div className="flex flex-col sm:flex-row justify-around items-start sm:space-x-10 ">
+          <div className="flex justify-around items-start  w-full h-full ">
+            <div className=" w-full">
+              <h1 className="py-2 text-[20px] sm:text-[32px] text-custom-primary">
                 Wheel Repair Service
               </h1>
               <ul>
                 {wheelRepair.map((item, idx) => (
-                  <li key="{idx}" className="text-[13px] sm:text-[18px] py-2">
+                  <li key={idx} className="text-sm sm:text-base py-1.5 sm:py-2">
                     • {item}
                   </li>
                 ))}
               </ul>
-              <h1 className="py-2 text-[20px] sm:text-[32px] text-custom-primary text-nowrap">
+
+              <h1 className="py-2 text-[17px] sm:text-[32px] text-custom-primary">
                 Wheel Custom Coloring
               </h1>
-              <p className="text-[13px] sm:text-[18px] py-1 ">
+              <p className="text-[15px] sm:text-[18px] py-1 ">
                 • Custom Dip Or Strip
               </p>
             </div>
-            <div className="  pl-2">
+            <div className="pl-2">
               <ul>
                 {cleanedLinks.map((item, idx) => (
-                  <li key={idx} className="text-[17px] sm:text-[25px] py-2">
+                  <li key={idx} className="text-[15px] sm:text-[25px] py-2">
                     {item}
                   </li>
                 ))}
               </ul>
               <div className="block sm:hidden ">
-                <p className="text-[13px] sm:text-[20px] py-2">
+                <p className="text-[13px] sm:text-[20px] py-2 text-wrap">
                   Become an AWRS insider! Join Our Email List.
                 </p>
                 <input
                   type="text"
                   placeholder="Email Address"
-                  className="bg-gray-100 text-[13px] sm:text-[18px] p-1 text-black rounded-2xl w-[150px] sm:w-[486px] sm:h-[40px] "
+                  className="bg-gray-100 text-[13px] sm:text-[18px] p-1 text-black rounded-2xl w-[100px] sm:w-[486px] sm:h-[40px] "
                 />
                 <button className="text-[13px] sm:text-[20px] bg-transparent border border-[#a3a325] my-2 px-1 sm:px-2 mt-4 rounded-lg">
                   Subscribe
@@ -113,7 +116,7 @@ const Footer = () => {
                 placeholder="Email Address"
                 className="bg-gray-100 text-[13px] sm:text-[18px] p-1 text-black rounded-2xl w-[150px] sm:w-[486px] sm:h-[40px] "
               />
-              <button className="text-[13px] sm:text-[20px] bg-transparent border border-[#a3a325] my-2 px-1 sm:px-2 mt-4 rounded-lg">
+              <button className="text-[13px] sm:text-[20px] bg-transparent border border-[#a3a325] my-2 px-1 sm:px-3 mt-4 rounded-lg hover:bg-custom-primary hover:text-white">
                 Subscribe
               </button>
             </div>

@@ -21,14 +21,14 @@ const Card: React.FC<CardProps> = ({ image, title, description }) => {
         <div className="info">
           <div className="flex-col justify-center items-center text-black px-8 text-center">
             <div className="flex justify-center items-center text-[32px]">
-              <h1 className="py-3 text-[25px] sm:text-[32px] sm:font-medium  italic capitalize">
+              <h1 className="py-3 text-[25px] sm:text-[32px] sm:font-medium  italic capitalize font-head tracking-wide">
                 {title}
               </h1>
               <button>
                 <ChevronRight className="text-[#c3c53a]" size={45} />
               </button>
             </div>
-            <p className="text-[11px]">{description}</p>
+            <p className="text-[11px] sm:text-[15px]">{description}</p>
           </div>
         </div>
       </div>
