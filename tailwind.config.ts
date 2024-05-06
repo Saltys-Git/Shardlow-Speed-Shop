@@ -23,7 +23,7 @@ const config = {
     },
     fontFamily: {
       Oswald: "Oswald",
-      sans: ["Helvetica Neue", "sans-serif"],
+      sans: ["Helvetica Neue"],
     },
     extend: {
       colors: {
