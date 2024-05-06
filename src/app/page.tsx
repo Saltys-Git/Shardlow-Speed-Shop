@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Hero from "./(client-panel)/Hero";
-import Slider from "@/components/Slider";
+import Hero from "../components/Hero";
+import Slider from "@/components/card/Slider";
 
 export default function Home() {
   return (

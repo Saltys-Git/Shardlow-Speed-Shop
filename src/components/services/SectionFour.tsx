@@ -26,7 +26,7 @@ const SectionFour: FC<SectionFourProps> = ({
             {title}
           </h1>
 
-          <p className="font-extralight text-[12px] sm:text-[22px] text-default-200 tracking-tight text-left">
+          <p className=" text-[12px] sm:text-[22px] text-default-300 font-light tracking-wider text-left">
             {description}
           </p>
           <ul className="py-5 flex flex-col sm:items-start">
@@ -36,7 +36,7 @@ const SectionFour: FC<SectionFourProps> = ({
                 className="text-custom-primary text-[30px] sm:text-[32px] flex items-center space-x-3"
               >
                 <span>•</span>
-                <span className="font-extralight text-[15px] sm:text-[30px] text-default-200 tracking-tight">
+                <span className=" text-[15px] sm:text-[30px] text-default-200 tracking-tight">
                   {item}
                 </span>
               </li>

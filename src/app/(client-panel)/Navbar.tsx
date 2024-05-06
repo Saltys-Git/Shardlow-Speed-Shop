@@ -132,7 +132,7 @@ const NavbarComponent = () => {
               <SheetFooter>
                 <Button
                   onClick={handleOpen}
-                  className="bg-custom-primary text-lg rounded-xl px-10 font-semibold mt-5"
+                  className="bg-custom-primary text-lg rounded-xl px-10   mt-5"
                 >
                   Get a Quote
                 </Button>
@@ -143,7 +143,7 @@ const NavbarComponent = () => {
 
         {/* this is for large screens */}
         <div className="hidden sm:flex">
-          <ul className="flex justify-center items-center space-x-8">
+          <ul className="flex justify-center items-center space-x-8 tracking-widest">
             {menuItems.map((item, idx) => (
               <li
                 key={idx}
@@ -187,7 +187,7 @@ const NavbarComponent = () => {
 
             <Button
               onClick={handleOpen}
-              className="bg-custom-primary text-lg rounded-xl px-10 font-semibold hover:bg-custom-primary hover:text-white hover:underline"
+              className="bg-custom-primary text-lg rounded-xl px-10 hover:bg-custom-primary hover:text-white hover:underline"
             >
               Get a Quote
             </Button>
@@ -259,7 +259,7 @@ const NavbarComponent = () => {
                         <Button
                           color="danger"
                           variant="outline"
-                          className="px-8 py-2 sm:text-[18px] bg-custom-primary rounded-2xl hover:border-custom-primary hover:bg-transparent hover:text-custom-primary hover:underline tracking-wider"
+                          className=" px-8 py-2 sm:text-[18px] bg-custom-primary rounded-2xl hover:border-custom-primary hover:bg-transparent hover:text-custom-primary hover:underline tracking-wider"
                         >
                           Next
                         </Button>

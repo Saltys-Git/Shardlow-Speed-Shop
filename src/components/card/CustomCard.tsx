@@ -20,13 +20,13 @@ const CustomCard: React.FC<CustomCardProps> = ({
 }) => {
   return (
     <div className="flex justify-center items-center">
-      <Card className="p-1 sm:p-10 sm:w-[490px] sm:h-[582px] bg-[#EBEBD4]">
+      <Card className="p-1 sm:p-8 sm:w-[490px] sm:h-[582px] bg-[#EBEBD4]">
         <CardHeader className="items-start">
           <h4 className="font-head tracking-wide italic text-[25px] sm:text-[42px]">
             {title}
           </h4>
         </CardHeader>
-        <CardBody className="overflow-visible sm:py-5 sm:min-w-[393px] sm:h-[185px] border flex items-center">
+        <CardBody className="overflow-visible sm:min-w-[393px] sm:h-[185px] border flex items-center">
           <Image
             alt="Card background"
             className="object-cover rounded-xl"
@@ -34,7 +34,9 @@ const CustomCard: React.FC<CustomCardProps> = ({
             width={400}
           />
           <CardFooter>
-            <p className="text-[14px] sm:text-[16px]">{description}</p>
+            <p className="text-[12px] font-light tracking-wider sm:text-[16px] sm:py-2">
+              {description}
+            </p>
           </CardFooter>
         </CardBody>
       </Card>

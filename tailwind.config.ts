@@ -27,7 +27,9 @@ const config = {
     extend: {
       fontFamily: {
         head: "Oswald",
+        sans: ["Helvetica Neue"],
       },
+
       colors: {
         custom: {
           primary: "#C6C71D",

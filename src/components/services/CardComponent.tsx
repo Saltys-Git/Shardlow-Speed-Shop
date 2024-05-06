@@ -30,7 +30,7 @@ const CardComponent: React.FC<CardComponentProps> = ({ items }) => {
                 <h2 className="text-[20px] sm:text-[42px] italic font-head tracking-wide">
                   {item.title}
                 </h2>
-                <p className="text-[10px] sm:text-[14px] text-default-300">
+                <p className="text-[10px] sm:text-[14px] text-default-300 font-light tracking-wider">
                   {item.desc}
                 </p>
               </div>

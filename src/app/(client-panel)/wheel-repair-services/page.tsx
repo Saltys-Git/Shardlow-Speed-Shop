@@ -6,10 +6,11 @@ import SectionTwo from "@/components/services/SectionTwo";
 import SectionThree from "@/components/services/SectionThree";
 import SectionFour from "@/components/services/SectionFour";
 import SectionFive from "@/components/services/SectionFive";
-import SectionSix from "@/components/services/SectionSix";
+
 import CardComponent from "@/components/services/CardComponent";
 import StaticCard from "@/components/services/StaticCard";
 import HoverCard from "@/components/services/HoverCard";
+import Appointment from "@/components/Appointment";
 
 const wheelRepairServices: React.FC = () => {
   return (
@@ -217,14 +218,7 @@ const wheelRepairServices: React.FC = () => {
         />
 
         {/* appointment section */}
-        <SectionSix
-          title="Schedule An Appointment"
-          content="Schedule WheelsOnsite today and let us help you get your wheels looking as good as new. Our mobile wheel and rim repair service is backed by both a 100% satisfaction guarantee and lifetime warranty on delamination."
-          buttonText="Get Started"
-          buttonOnClick={() => {
-            console.log("clicked");
-          }}
-        />
+        <Appointment />
       </div>
     </>
   );
