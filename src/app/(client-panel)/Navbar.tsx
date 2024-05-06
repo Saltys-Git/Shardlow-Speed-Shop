@@ -65,18 +65,25 @@ const NavbarComponent = () => {
   return (
     <nav>
       <div className="flex justify-between items-center p-6 ">
-        <div className="md:flex  md:space-x-4 md:items-center">
+        <div className="flex justify-center items-center space-x-2 sm:flex  sm:space-x-4 sm:items-center">
           <Image
             src="/logo.png"
             width={40}
             height={40}
             alt="Picture of the author"
-            className="hidden md:block"
+            className="hidden sm:block"
           />
-          <h1 className="text-2xl">Our Logo</h1>
+          <Image
+            src="/logo.png"
+            width={20}
+            height={20}
+            alt="Picture of the author"
+            className="block sm:hidden"
+          />
+          <h1 className="text-xl sm:2xl">Our Logo</h1>
         </div>
         {/* this is for mobile devices */}
-        <div className="flex md:hidden">
+        <div className="flex sm:hidden">
           <Sheet>
             <SheetTrigger>
               <AlignJustify color="#C6C71D" />
@@ -134,7 +141,7 @@ const NavbarComponent = () => {
         </div>
 
         {/* this is for large screens */}
-        <div className="hidden md:flex">
+        <div className="hidden sm:flex">
           <ul className="flex justify-center items-center space-x-8">
             {menuItems.map((item, idx) => (
               <li
