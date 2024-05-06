@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import CustomCard from "../card/CustomCard";
 
 interface CardData {
@@ -7,42 +7,18 @@ interface CardData {
   description: string;
 }
 
-const StaticCard: React.FC = () => {
-  const cardData: CardData[] = [
-    {
-      title: "Frontend Radio",
-      imageUrl: "/img.jpg",
-      description:
-        "It can be tempting to temporarily continue driving with a flat tire. But driving with a puncture causes bends and cracks in your wheels. Alloy Wheel Repair Specialists can provide expert rim repair in these circumstances.",
-    },
-    {
-      title: "Frontend Radio",
-      imageUrl: "/img.jpg",
-      description:
-        "It can be tempting to temporarily continue driving with a flat tire. But driving with a puncture causes bends and cracks in your wheels. Alloy Wheel Repair Specialists can provide expert rim repair in these circumstances.",
-    },
-    {
-      title: "Frontend Radio",
-      imageUrl: "/img.jpg",
-      description:
-        "It can be tempting to temporarily continue driving with a flat tire. But driving with a puncture causes bends and cracks in your wheels. Alloy Wheel Repair Specialists can provide expert rim repair in these circumstances.",
-    },
-    {
-      title: "Frontend Radio",
-      imageUrl: "/img.jpg",
-      description:
-        "It can be tempting to temporarily continue driving with a flat tire. But driving with a puncture causes bends and cracks in your wheels. Alloy Wheel Repair Specialists can provide expert rim repair in these circumstances.",
-    },
-    {
-      title: "Frontend Radio",
-      imageUrl: "/img.jpg",
-      description:
-        "It can be tempting to temporarily continue driving with a flat tire. But driving with a puncture causes bends and cracks in your wheels. Alloy Wheel Repair Specialists can provide expert rim repair in these circumstances.",
-    },
-  ];
+interface StaticCardProps {
+  title: string;
+  cardData: CardData[];
+}
+
+const StaticCard: FC<StaticCardProps> = ({ title, cardData }) => {
   return (
-    <section className="px-[195px] pt-[105px]">
-      <div>
+    <section className="sm:px-[195px] sm:pt-[105px]">
+      <h1 className="text-[18px] sm:text-[62px] font-medium  text-white py-10 sm:py-0 sm:pb-[57px] tracking-tight text-center">
+        {title}
+      </h1>
+      <div className="px-10 ">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
           {cardData.map((data, index) => (
             <div key={index}>
