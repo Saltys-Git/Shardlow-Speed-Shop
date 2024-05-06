@@ -1,55 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../card/Card";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const HoverCard = () => {
-  const cardData = [
-    {
-      image: "/dump.png",
-      title: "Sand Blasting",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-    },
-    {
-      image: "/dump.png",
-      title: "Sand Blasting",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-    },
-    {
-      image: "/dump.png",
-      title: "Sand Blasting",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-    },
-    {
-      image: "/dump.png",
-      title: "Sand Blasting",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-    },
-    {
-      image: "/dump.png",
-      title: "Sand Blasting",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-    },
-    {
-      image: "/dump.png",
-      title: "Sand Blasting",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-    },
-    {
-      image: "/dump.png",
-      title: "Sand Blasting",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
-    },
-  ];
+interface CardData {
+  image: string;
+  title: string;
+  description: string;
+}
+
+interface HoverCardProps {
+  cardData: CardData[];
+}
+
+const HoverCard: React.FC<HoverCardProps> = ({ cardData }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToNextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === cardData.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const goToPrevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? cardData.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
-    <section>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 px-44">
+    <section className="pt-10 sm:pt-[144px] px-5 sm:px-[170px]">
+      <h1 className="text-[30px] sm:text-[62px]  text-center font-medium text-white py-5 sm:py-0 sm:pb-[57px] tracking-tight">
+        Wheel Repair Service
+      </h1>
+      <div className="flex justify-end text-custom-primary my-5 space-x-4 sm:hidden">
+        <span className=" bg-white border-custom-primary ">
+          <ChevronLeft onClick={goToPrevSlide} />
+        </span>
+        <span className=" bg-white border-custom-primary">
+          <ChevronRight onClick={goToNextSlide} />
+        </span>
+      </div>
+      {/* this is for small devices */}
+      <div className="block sm:hidden justify-center">
+        <Card
+          key={currentIndex}
+          image={cardData[currentIndex].image}
+          title={cardData[currentIndex].title}
+          description={cardData[currentIndex].description}
+        />
+      </div>
+      {/* this is for large devices */}
+      <div className="hidden sm:grid grid-cols-1 sm:grid-cols-3 gap-2 justify-center">
         {cardData.map((data, index) => (
           <Card
             key={index}

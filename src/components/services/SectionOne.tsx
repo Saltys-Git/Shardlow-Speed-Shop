@@ -1,16 +1,19 @@
 import React from "react";
 
-const SectionOne = () => {
+interface SectionOneProps {
+  title: string;
+  subtitle: string;
+}
+
+const SectionOne: React.FC<SectionOneProps> = ({ title, subtitle }) => {
   return (
     <>
-      <section className="text-white">
-        <h1 className="text-[12px] font-Oswald md:text-[56px]  font-normal italic text-center py-5 md:pt-[146px] md:pb-[62px] tracking-tight ">
-          Expert Wheel Repair Services for Damagaed Wheels and Rims
+      <section className="text-white container pt-16 ">
+        <h1 className="text-[14px] font-Oswald sm:text-[56px] font-normal italic text-center sm:pt-[146px] pb-5 sm:pb-[62px] tracking-tight ">
+          {title}
         </h1>
-        <p className="font-light text-[10px] text-default-300 md:text-[32px] px-8 text-center ">
-          Are your alloy wheels suffering from scratches, dents, scuffs and
-          cracks? Maybe your rims are bent out of shape or missing metal. Let
-          our skilled team return them to their original condition.
+        <p className=" text-center animate-slide-in font-light text-[12px] sm:text-[28px] px-8 sm:leading-10 text-default-300">
+          {subtitle}
         </p>
       </section>
     </>

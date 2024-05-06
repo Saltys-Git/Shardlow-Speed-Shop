@@ -39,11 +39,11 @@ const Slider = () => {
 
   return (
     <section className=" flex flex-col relative">
-      <h1 className=" text-white text-[22px] md:text-4xl text-center pt-10 ">
+      <h1 className=" text-white text-[22px] sm:text-4xl text-center pt-10 ">
         Alloy Wheel Repair Specialists
       </h1>
       <div className="px-14 pb-10">
-        <div className="flex justify-end text-custom-primary my-5 space-x-4 md:hidden">
+        <div className="flex justify-end text-custom-primary my-5 space-x-4 sm:hidden">
           <span className=" bg-white border-custom-primary ">
             <ChevronLeft onClick={goToPrevSlide} />
           </span>
@@ -51,7 +51,7 @@ const Slider = () => {
             <ChevronRight onClick={goToNextSlide} />
           </span>
         </div>
-        <div className="block md:hidden">
+        <div className="block sm:hidden">
           <Card shadow="sm">
             <CardBody className="overflow-visible p-0">
               <Image
@@ -80,7 +80,7 @@ const Slider = () => {
           </Card>
         </div>
 
-        <div className="hidden gap-20 md:grid grid-cols-2 sm:grid-cols-3 px-44 py-20">
+        <div className="hidden gap-20 sm:grid grid-cols-2 sm:grid-cols-3 px-44 py-20">
           {list.map((item, index) => (
             <Card
               key={index}
