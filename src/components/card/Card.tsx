@@ -10,7 +10,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ image, title, description }) => {
   return (
-    <div className="py-10 flex justify-center">
+    <div className="py-10 flex justify-center ">
       <div className="card ">
         <img
           src={image}

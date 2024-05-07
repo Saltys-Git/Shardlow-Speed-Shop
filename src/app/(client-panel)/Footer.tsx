@@ -58,7 +58,10 @@ const Footer = () => {
               </h1>
               <ul>
                 {wheelRepair.map((item, idx) => (
-                  <li key={idx} className="text-sm sm:text-base py-1.5 sm:py-2">
+                  <li
+                    key={idx}
+                    className="text-sm sm:text-base py-1.5 sm:py-2 font-light tracking-wider"
+                  >
                     • {item}
                   </li>
                 ))}
@@ -67,26 +70,29 @@ const Footer = () => {
               <h1 className="py-2 text-[17px] sm:text-[32px] text-custom-primary">
                 Wheel Custom Coloring
               </h1>
-              <p className="text-[15px] sm:text-[18px] py-1 ">
+              <p className="text-[15px] sm:text-[18px] py-1 font-light tracking-wider">
                 • Custom Dip Or Strip
               </p>
             </div>
             <div className="pl-2">
               <ul>
                 {cleanedLinks.map((item, idx) => (
-                  <li key={idx} className="text-[15px] sm:text-[25px] py-2">
+                  <li
+                    key={idx}
+                    className="text-[15px] sm:text-[25px] py-2 font-light tracking-wider "
+                  >
                     {item}
                   </li>
                 ))}
               </ul>
               <div className="block sm:hidden ">
-                <p className="text-[13px] sm:text-[20px] py-2 text-wrap">
+                <p className="text-[13px] sm:text-[20px] py-2 text-wrap font-light  tracking-wider">
                   Become an AWRS insider! Join Our Email List.
                 </p>
                 <input
                   type="text"
                   placeholder="Email Address"
-                  className="bg-gray-100 text-[13px] sm:text-[18px] p-1 text-black rounded-2xl w-[100px] sm:w-[486px] sm:h-[40px] "
+                  className="bg-gray-100 text-[13px] sm:text-[18px] p-1 text-black rounded-2xl w-[100px] sm:w-[486px] sm:h-[40px] font-light tracking-wider"
                 />
                 <button className="text-[13px] sm:text-[20px] bg-transparent border border-[#a3a325] my-2 px-1 sm:px-2 mt-4 rounded-lg">
                   Subscribe
@@ -99,7 +105,7 @@ const Footer = () => {
               <h1 className="py-2 text-[22px] sm:text-[32px]">
                 Connect With Us
               </h1>
-              <div className="flex items-center space-x-5 sm:space-x-10">
+              <div className="flex items-center space-x-5 sm:space-x-10 ">
                 {socialMediaLinks.map((link, idx) => (
                   <Link href={link.href} key={idx}>
                     {React.cloneElement(link.icon, { size: "30" })}
@@ -108,13 +114,13 @@ const Footer = () => {
               </div>
             </div>
             <div className="hidden sm:block">
-              <p className="text-[13px] sm:text-[20px] py-2">
+              <p className="text-[13px] sm:text-[20px] py-2 font-light  tracking-wider">
                 Become an AWRS insider! Join Our Email List.
               </p>
               <input
                 type="text"
                 placeholder="Email Address"
-                className="bg-gray-100 text-[13px] sm:text-[18px] p-1 text-black rounded-2xl w-[150px] sm:w-[486px] sm:h-[40px] "
+                className="bg-gray-100 text-[13px] sm:text-[18px] p-1 text-black rounded-2xl w-[150px] sm:w-[486px] sm:h-[40px] font-light tracking-wider "
               />
               <button className="text-[13px] sm:text-[20px] bg-transparent border border-[#a3a325] my-2 px-1 sm:px-3 mt-4 rounded-lg hover:bg-custom-primary hover:text-white">
                 Subscribe

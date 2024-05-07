@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Hero from "@/components/services/Hero";
+import Hero from "@/components/Hero";
 import SectionOne from "@/components/services/SectionOne";
 import SectionTwo from "@/components/services/SectionTwo";
 import SectionThree from "@/components/services/SectionThree";
@@ -17,12 +17,12 @@ const wheelCustomColoring = () => {
     <>
       <div className="bg-custom-bgColor h-full justify-center items-center max-w-full ">
         <Hero bgSrc={"/bg.jpg"}>
-          <div className="px-2 sm:px-5 text-center text-white my-0 sm:my-20 w-full italic">
-            <h1 className="text-[13px] sm:text-[62px] font-head tracking-wide w-full sm:py-5">
+          <div className="px-5 my-0 sm:my-20 w-full flex flex-col items-center justify-center text-center h-1/2 ">
+            <h1 className="text-white text-[22px] sm:text-[62px] leading-snug font-head ">
               Professional Wheel Custom Coloring – The Finest Rim Painting &
               Powder Coating
             </h1>
-            <h1 className=" text-custom-primary text-[8.5px] sm:text-[38px] leading-snug w-full  ">
+            <h1 className=" text-custom-primary text-[16px] sm:text-[38px] leading-snug w-full font-head ">
               Let us customize your wheels with high-quality finishes in the
               colors of your choice.
             </h1>
