@@ -5,7 +5,7 @@ import Appointment from "@/components/Appointment";
 import CarouselSection from "@/components/services/CarouselSection";
 import FAQSection from "@/components/services/FAQSection";
 import repairData from "@/data/repairData";
-import Carousel from "@/components/card/Carousol";
+import Carousel from "@/components/card/Carousel";
 
 const dynamicRepairService = ({
   params,
@@ -19,7 +19,7 @@ const dynamicRepairService = ({
   useEffect(() => {
     // matching ID
     const foundServiceData = repairData.find((data) => {
-      return data.service === params.service[0];
+      return data.Id === params.service[0];
     });
 
     if (foundServiceData) {
@@ -31,10 +31,10 @@ const dynamicRepairService = ({
 
   if (!serviceData) {
     return (
-      // <div className="bg-gray-900 text-white py-8 text-center flex justify-center items-center h-screen">
-      //   <h1 className="text-4xl sm:text-6xl">404 Not Found</h1>
-      // </div>
-      <Carousel />
+      <div className="bg-gray-900 text-white py-8 text-center flex justify-center items-center h-screen">
+        <h1 className="text-4xl sm:text-6xl">404 Not Found</h1>
+      </div>
+      // <Carousel />
     );
   }
 
@@ -49,11 +49,12 @@ const dynamicRepairService = ({
           </div>
         </Hero>
 
-        {/* paragraphn + carousel  */}
+        {/* paragraph + carousel */}
         <CarouselSection
-          title={serviceData.carouselTitle}
+          title={serviceData.carouselSectionTitle}
           contentUp={serviceData.carouselContentUp}
           contentDown={serviceData.carouselContentDown}
+          images={serviceData.carouselImages}
         />
 
         {/* FAQ section  */}

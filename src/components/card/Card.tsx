@@ -28,7 +28,9 @@ const Card: React.FC<CardProps> = ({ image, title, description }) => {
                 <ChevronRight className="text-[#c3c53a]" size={45} />
               </button>
             </div>
-            <p className="text-[11px] sm:text-[15px]">{description}</p>
+            <p className="text-[11px] sm:text-[15px]  font-light tracking-wider">
+              {description}
+            </p>
           </div>
         </div>
       </div>
