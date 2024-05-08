@@ -1,4 +1,7 @@
+"use client";
+
 // Global Imports
+import { useState } from "react";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 
@@ -6,8 +9,19 @@ import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Hero from "../components/Hero";
 import Slider from "@/components/card/Slider";
+import ModalComponent from "@/components/ModelComponent";
 
-export default function Home() {
+const Home: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="bg-custom-bgColor h-full justify-center items-center max-w-full ">
       <Hero bgSrc={"/bg.jpg"}>
@@ -22,6 +36,7 @@ export default function Home() {
           </p>
           <Button
             variant={"outline"}
+            onClick={openModal}
             className="bg-transparent border-custom-primary my-8 rounded-xl hover:bg-custom-primary hover:text-white hover:underline"
           >
             Get A Quote
@@ -152,6 +167,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <ModalComponent isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
-}
+};
+
+export default Home;

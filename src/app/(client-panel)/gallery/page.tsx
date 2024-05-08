@@ -80,7 +80,7 @@ const Gallery = () => {
       <div className="bg-custom-bgColor min-h-screen justify-center items-center max-w-full text-white ">
         <Hero bgSrc={"/bg.jpg"}>
           <div className="px-5 my-0 sm:my-20 w-full flex items-center justify-center text-center h-1/2 ">
-            <h1 className="text-white text-[42px] sm:text-[88px] leading-snug font-heading font-head tracking-wide">
+            <h1 className="text-white text-[32px] sm:text-[88px] leading-snug font-heading font-head tracking-wide">
               Shardlow Speed Shop ltd and Wheel Refinishing Gallery
             </h1>
           </div>
