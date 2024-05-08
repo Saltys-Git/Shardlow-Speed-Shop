@@ -81,7 +81,9 @@ const NavbarComponent = () => {
             alt="Picture of the author"
             className="block sm:hidden"
           />
-          <h1 className="text-xl sm:2xl">Our Logo</h1>
+          <h1 className="text-xl sm:text-4xl font-head ">
+            Shardlow Speed Shop
+          </h1>
         </div>
         {/* this is for mobile devices */}
         <div className="flex sm:hidden">

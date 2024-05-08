@@ -38,7 +38,7 @@ const Gallery = () => {
     {
       image1: [
         { srcOne: "/bg.jpg", alt: "Image one" },
-        { srcTwo: "/img.jpg", alt: "Image two" },
+        { srcTwo: "/logo.png", alt: "Image two" },
       ],
     },
     {
@@ -110,22 +110,32 @@ const Gallery = () => {
           {images.map((item, index) => (
             <div
               key={index}
-              className="w-[160px] min-h-[160px] sm:w-[420px] sm:min-h-[420px] rounded-xl border border-red-300 sm:my-5"
+              className="w-[160px] min-h-[160px] sm:w-[420px] sm:min-h-[420px] rounded-xl  sm:my-5"
             >
               <ReactCompareSlider
                 itemOne={
-                  <ReactCompareSliderImage
-                    src={item.image1[0].srcOne}
-                    alt={item.image1[0].alt}
-                    className="w-[160px] min-h-[160px] sm:w-[420px] sm:min-h-[420px] object-fill rounded-xl"
-                  />
+                  <div className="relative">
+                    <ReactCompareSliderImage
+                      src={item.image1[0].srcOne}
+                      alt={item.image1[0].alt}
+                      className="w-[160px] min-h-[160px] sm:w-[420px] sm:min-h-[420px] object-fill rounded-xl"
+                    />
+                    <div className="absolute top-0 left-0 text-white  p-4  tracking-wider  text-xl">
+                      Before
+                    </div>
+                  </div>
                 }
                 itemTwo={
-                  <ReactCompareSliderImage
-                    src={item.image1[1].srcTwo}
-                    alt={item.image1[1].alt}
-                    className="w-[160px] min-h-[160px] sm:w-[420px] sm:min-h-[420px] object-fill rounded-xl"
-                  />
+                  <div className="relative">
+                    <ReactCompareSliderImage
+                      src={item.image1[1].srcTwo}
+                      alt={item.image1[1].alt}
+                      className="w-[160px] min-h-[160px] sm:w-[420px] sm:min-h-[420px] object-fill rounded-xl"
+                    />
+                    <div className="absolute top-0 right-0 text-white p-4  tracking-wider  text-xl">
+                      After
+                    </div>
+                  </div>
                 }
               />
             </div>
