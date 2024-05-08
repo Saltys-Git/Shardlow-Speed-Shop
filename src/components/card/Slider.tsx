@@ -1,8 +1,11 @@
 "use client";
+// Global Imports
 import React, { useState } from "react";
-import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
+// External Library Import
+import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 
 const Slider = () => {
   const list = [

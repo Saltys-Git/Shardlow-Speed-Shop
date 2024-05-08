@@ -1,12 +1,15 @@
 "use client";
+
+// global import
 import React from "react";
+
+// Native imports
 import Hero from "@/components/Hero";
 import SectionOne from "@/components/services/SectionOne";
 import SectionTwo from "@/components/services/SectionTwo";
 import SectionThree from "@/components/services/SectionThree";
 import SectionFour from "@/components/services/SectionFour";
 import SectionFive from "@/components/services/SectionFive";
-
 import CardComponent from "@/components/services/CardComponent";
 import StaticCard from "@/components/services/StaticCard";
 import HoverCard from "@/components/services/HoverCard";

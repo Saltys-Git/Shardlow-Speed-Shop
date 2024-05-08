@@ -1,5 +1,5 @@
+// Global Imports
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { AlignJustify } from "lucide-react";
@@ -11,14 +11,12 @@ import {
   SheetTrigger,
   SheetFooter,
 } from "@/components/ui/sheet";
-
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
 import {
   Modal,
   ModalContent,
@@ -28,6 +26,8 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+
 const NavbarComponent = () => {
   const [activeLink, setActiveLink] = useState("Home");
 

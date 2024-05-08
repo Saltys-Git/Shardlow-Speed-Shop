@@ -1,7 +1,10 @@
 "use client";
 
+// Global Imports
 import React from "react";
 import Image from "next/image";
+
+// Native Imports
 import NavbarComponent from "../app/(client-panel)/Navbar";
 
 const Hero = ({

@@ -1,7 +1,9 @@
+// Global Imports
+import React from "react";
+
+// Native Imports
 import Content from "@/components/Content";
 import Hero from "@/components/Hero";
-
-import React from "react";
 
 const PrivacyPolicy = () => {
   return (

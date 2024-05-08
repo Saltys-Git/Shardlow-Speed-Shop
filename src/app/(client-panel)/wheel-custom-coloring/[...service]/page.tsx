@@ -1,10 +1,14 @@
 "use client";
+
+// Global Imports
 import React, { useEffect, useState } from "react";
+import customColoringData from "@/data/customColoringData";
+
+// Native Imports
 import Hero from "@/components/Hero";
 import Appointment from "@/components/Appointment";
 import CarouselSection from "@/components/services/CarouselSection";
 import FAQSection from "@/components/services/FAQSection";
-import customColoringData from "@/data/customColoringData";
 
 import { Spinner } from "@nextui-org/spinner";
 const dynamicColorService = ({

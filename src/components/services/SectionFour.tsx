@@ -1,3 +1,4 @@
+// Global Imports
 import React, { FC } from "react";
 import { ChevronRight } from "lucide-react";
 

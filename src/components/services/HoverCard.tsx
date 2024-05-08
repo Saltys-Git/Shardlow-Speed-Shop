@@ -1,6 +1,9 @@
+// Global Imports
 import React, { useState } from "react";
-import Card from "../card/Card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
+// Native Imports
+import Card from "../card/Card";
 
 interface CardData {
   image: string;

@@ -1,8 +1,10 @@
+// Global Imports
+import React from "react";
+import Image from "next/image";
+
+// Native Imports
 import Appointment from "@/components/Appointment";
 import Hero from "@/components/Hero";
-import { Card } from "@nextui-org/card";
-import Image from "next/image";
-import React from "react";
 
 const aboutUs = () => {
   const teamData = [

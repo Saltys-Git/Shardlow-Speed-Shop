@@ -1,4 +1,7 @@
+// Global Imports
 import React from "react";
+
+// Native Imports
 import { Button } from "@/components/ui/button";
 
 const Appointment: React.FC = () => {

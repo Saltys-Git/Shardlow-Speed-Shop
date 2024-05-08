@@ -1,12 +1,15 @@
 "use client";
+
+// Global Imports
 import React, { useEffect, useState } from "react";
+import repairData from "@/data/repairData";
+import { Spinner } from "@nextui-org/spinner";
+
+// Native Imports
 import Hero from "@/components/Hero";
 import Appointment from "@/components/Appointment";
 import CarouselSection from "@/components/services/CarouselSection";
 import FAQSection from "@/components/services/FAQSection";
-import repairData from "@/data/repairData";
-
-import { Spinner } from "@nextui-org/spinner";
 
 const dynamicRepairService = ({
   params,

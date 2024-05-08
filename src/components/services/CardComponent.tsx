@@ -1,5 +1,6 @@
-import Image from "next/image";
+// Global Imports
 import React from "react";
+import Image from "next/image";
 
 interface CardItem {
   title: string;

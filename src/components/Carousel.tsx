@@ -1,11 +1,13 @@
 "use client";
 
+// Global Imports
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+// Native Imports
+import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   Pagination,
   Navigation,

@@ -1,13 +1,16 @@
 "use client";
 
-import Appointment from "@/components/Appointment";
-import Hero from "@/components/Hero";
-import Link from "next/link";
+// Global Imports
 import React, { useState } from "react";
+import Link from "next/link";
 import {
   ReactCompareSlider,
   ReactCompareSliderImage,
 } from "react-compare-slider";
+
+// Native Imports
+import Appointment from "@/components/Appointment";
+import Hero from "@/components/Hero";
 
 const Gallery = () => {
   const [activeLink, setActiveLink] = useState("/");

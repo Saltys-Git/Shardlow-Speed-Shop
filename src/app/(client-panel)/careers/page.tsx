@@ -1,10 +1,13 @@
 "use client";
 
+// Global Imports
+import React from "react";
+
+// Native Imports
 import Appointment from "@/components/Appointment";
 import Hero from "@/components/Hero";
 import FAQSection from "@/components/services/FAQSection";
 import { Button } from "@/components/ui/button";
-import React from "react";
 
 const careers = () => {
   return (

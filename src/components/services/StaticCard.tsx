@@ -1,4 +1,7 @@
+// Global Imports
 import React, { FC } from "react";
+
+// Native Imports
 import CustomCard from "../card/CustomCard";
 
 interface CardData {

@@ -1,4 +1,7 @@
+// Global Imports
 import React, { useState } from "react";
+
+// Native Imports
 import {
   Accordion,
   AccordionItem,

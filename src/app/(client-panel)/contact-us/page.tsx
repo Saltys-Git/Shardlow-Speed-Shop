@@ -1,17 +1,21 @@
-import Hero from "@/components/Hero";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardBody } from "@nextui-org/card";
-import Image from "next/image";
+// Global Imports
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { FaYoutube, FaLinkedin } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
+import { Card, CardBody } from "@nextui-org/card";
+
+// Native Imports
+import Hero from "@/components/Hero";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Separator } from "@/components/ui/separator";
+import { Textarea } from "@/components/ui/textarea";
 import Appointment from "@/components/Appointment";
+
 const contactUs = () => {
   const socialMediaLinks = [
     { icon: <IoLogoFacebook color="#a3a325" />, href: "#" },

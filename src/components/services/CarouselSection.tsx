@@ -1,4 +1,7 @@
+// Global Imports
 import React from "react";
+
+// Native Imports
 import Carousel from "../Carousel";
 
 interface CarouselSectionProps {
