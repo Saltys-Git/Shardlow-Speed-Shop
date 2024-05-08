@@ -97,3 +97,55 @@
 .animate-slide-in {
   animation: slide-in 1.5s ease-out;
 }
+
+/* carousel  */
+
+::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #797979;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222224;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+
+.swiper_container {
+  height: 38rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.swiper-slide {
+  width: 37rem !important;
+  height: 36rem !important;
+  position: relative;
+}
+.swiper-slide img {
+  width: 37rem;
+  height: 36rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+@media (max-width: 500px) {
+  .swiper_container {
+    height: 28rem;
+  }
+  .swiper-slide {
+    width: 22rem !important;
+    height: 26rem !important;
+  }
+  .swiper-slide img {
+    width: 22rem !important;
+    height: 26rem !important;
+  }
+}

@@ -1,11 +1,10 @@
 import React from "react";
-import Carousel from "../card/Carousel";
+import Carousel from "../Carousel";
 
 interface CarouselSectionProps {
   title: string;
   contentUp: string;
   contentDown: string;
-
   images: string[];
 }
 
@@ -13,7 +12,6 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({
   title,
   contentUp,
   contentDown,
-
   images,
 }) => {
   return (
@@ -29,11 +27,10 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({
         <p className="container sm:text-[26px] text-[12px] pb-5 font-light tracking-wider text-default-300 text-balance">
           {contentUp}
         </p>
-        {/* carousel start  */}
 
-        <div>{/* <Carousel /> */}</div>
-
-        {/* carousel  end  */}
+        <div>
+          <Carousel images={images} />
+        </div>
 
         <p className="container sm:text-[26px] text-[12px] py-5 font-light tracking-wider text-default-300 text-balance">
           {contentDown}

@@ -5,7 +5,8 @@ import Appointment from "@/components/Appointment";
 import CarouselSection from "@/components/services/CarouselSection";
 import FAQSection from "@/components/services/FAQSection";
 import repairData from "@/data/repairData";
-import Carousel from "@/components/card/Carousel";
+
+import { Spinner } from "@nextui-org/spinner";
 
 const dynamicRepairService = ({
   params,
@@ -31,10 +32,16 @@ const dynamicRepairService = ({
 
   if (!serviceData) {
     return (
-      <div className="bg-gray-900 text-white py-8 text-center flex justify-center items-center h-screen">
-        <h1 className="text-4xl sm:text-6xl">404 Not Found</h1>
+      <div className="bg-custom-bgColor  py-8 text-center flex justify-center items-center h-screen">
+        <h1 className="text-4xl sm:text-6xl text-white">
+          <Spinner
+            label="Loading..."
+            labelColor="warning"
+            color="warning"
+            size="lg"
+          />
+        </h1>
       </div>
-      // <Carousel />
     );
   }
 
