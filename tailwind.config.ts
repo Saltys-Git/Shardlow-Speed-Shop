@@ -2,14 +2,14 @@ import { nextui } from "@nextui-org/theme";
 
 import type { Config } from "tailwindcss";
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|card|dropdown|link|modal|navbar|spinner|ripple|menu|divider|popover).js"
+    "./node_modules/@nextui-org/theme/dist/components/(button|card|dropdown|link|modal|navbar|spinner|tabs|ripple|menu|divider|popover).js",
   ],
   prefix: "",
   theme: {
@@ -29,7 +29,6 @@ const config = {
         head: "Oswald",
         sans: ["Helvetica Neue"],
       },
-
       colors: {
         custom: {
           primary: "#C6C71D",
@@ -38,7 +37,6 @@ const config = {
           // serive
           card: "#EAEB88",
         },
-
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -94,7 +92,17 @@ const config = {
       },
     },
   },
-  plugins: [nextui()],
-} satisfies Config;
+  plugins: [
+    nextui({
+      themes: {
+        light: {
+          colors: {
+            primary: "#C6C71D", // Set your custom primary color here
+          },
+        },
+      },
+    }),
+  ],
+};
 
 export default config;
