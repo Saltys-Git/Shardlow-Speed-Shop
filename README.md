@@ -10,7 +10,8 @@ A Wheel &amp; Rim Repair Service in Shardlow, Derby DE72 2HL, United Kingdom
 |2|[`Initial Folder Structure`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#initial-folder-structure)|
 |3|[`Menu Structure`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#menu-structure)|
 |4|[`Referenses`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#referenses)|
-|4|[`Branch Details`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#branch-details)|
+|5|[`Branch Details`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#branch-details)|
+|6|[`Database Model`](https://github.com/TechysIT/Shardlow-Speed-Shop/blob/main/README.md#database-model)|
 
 
 # Tech Stack
@@ -121,6 +122,9 @@ A Wheel &amp; Rim Repair Service in Shardlow, Derby DE72 2HL, United Kingdom
 	>Pressable with "/gallery" href
 * Get a Quote
 	>Popup modal with form & same as MoodBoard Site 2
+
+## Database Model
+[View on Eraser![](https://app.eraser.io/workspace/ZAdR7ulUFaEI6B3VouxN/preview?elements=51ODcCGx5yA0Wz5CxbvjNA&type=embed)](https://app.eraser.io/workspace/ZAdR7ulUFaEI6B3VouxN?elements=51ODcCGx5yA0Wz5CxbvjNA)
 
 
 ## Referenses
