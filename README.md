@@ -22,7 +22,7 @@ A Wheel &amp; Rim Repair Service in Shardlow, Derby DE72 2HL, United Kingdom
 * Database - Postgresql. (Currently Not Required)
 * Authentication - Clerk. (Currently Not Required)
 * JS Libraries - 
-	* React hook form with shadcn, 
+	* React hook form with Shadcn, 
 	* Image Slider 
 		>[React Compare Slider Library](https://www.npmjs.com/package/react-compare-slider)  with item label as before and after, changePositionOnHover
 	* Nodemailer. (Currently Not Required)
@@ -124,7 +124,7 @@ A Wheel &amp; Rim Repair Service in Shardlow, Derby DE72 2HL, United Kingdom
 	>Popup modal with form & same as MoodBoard Site 2
 
 ## Database Model
-[](https://app.eraser.io/workspace/ZAdR7ulUFaEI6B3VouxN/preview?elements=51ODcCGx5yA0Wz5CxbvjNA&type=embed)
+[View on Eraser![](https://app.eraser.io/workspace/ZAdR7ulUFaEI6B3VouxN/preview?elements=51ODcCGx5yA0Wz5CxbvjNA&type=embed)](https://app.eraser.io)
 
 
 ## Referenses
