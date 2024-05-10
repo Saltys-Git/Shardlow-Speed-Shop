@@ -75,7 +75,7 @@ A Wheel &amp; Rim Repair Service in Shardlow, Derby DE72 2HL, United Kingdom
 				* favicon.ico
 				* globals.css
 				* Navbar.tsx
-			* Footer.tsx
+				* Footer.tsx
 				* layout.tsx
 				* page.tsx
 		* components 
