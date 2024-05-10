@@ -14,8 +14,8 @@ const careers = () => {
     <>
       <div className="bg-custom-bgColor min-h-screen justify-center items-center max-w-full ">
         <Hero bgSrc={"/bg.jpg"}>
-          <div className="px-5 my-0 sm:my-20 w-full flex items-center justify-center text-center h-1/2 ">
-            <h1 className="text-white text-[42px] sm:text-[88px] leading-snug font-heading font-head tracking-wide">
+          <div className="w-full h-full flex items-center justify-center text-center px-10 sm:px-20">
+            <h1 className="text-white text-2xl sm:text-6xl leading-snug font-heading font-head tracking-wide">
               Careers
             </h1>
           </div>

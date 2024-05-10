@@ -25,8 +25,8 @@ const Home: React.FC = () => {
   return (
     <div className="bg-custom-bgColor h-full justify-center items-center max-w-full ">
       <Hero bgSrc={"/bg.jpg"}>
-        <div className="px-5 my-0 sm:my-20   w-full sm:w-1/2">
-          <h1 className="text-custom-primary text-3xl sm:text-[88px] leading-snug w-2/3 font-heading font-head tracking-wide">
+        <div className="px-5 my-5 sm:my-20   w-full sm:w-1/2">
+          <h1 className="text-custom-primary text-3xl sm:text-8xl leading-snug w-2/3 font-heading font-head tracking-wide">
             Trust Us To Repair Your
             <span className="text-white"> WHEELS.</span>
           </h1>
@@ -83,7 +83,7 @@ const Home: React.FC = () => {
           className="flex flex-col
        justify-center items-center p-10  text-center text-white"
         >
-          <h1 className="text-[25px] sm:text-4xl py-6 font-head tracking-wide">
+          <h1 className="text-[25px] sm:text-6xl py-6 font-head tracking-wide">
             Wheel Custom Coloring
           </h1>
           <p className="text-[15px] px-10 w-full sm:w-2/3 sm:text-base">

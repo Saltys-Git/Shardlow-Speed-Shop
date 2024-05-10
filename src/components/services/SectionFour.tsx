@@ -27,7 +27,7 @@ const SectionFour: FC<SectionFourProps> = ({
             {title}
           </h1>
 
-          <p className=" text-[12px] sm:text-[22px] text-default-300 font-light tracking-wider text-left">
+          <p className=" text-[12px] sm:text-2xl text-default-300 font-light tracking-wider text-left">
             {description}
           </p>
           <ul className="py-5 flex flex-col sm:items-start">

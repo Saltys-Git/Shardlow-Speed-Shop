@@ -21,11 +21,11 @@ const wheelCustomColoring = () => {
       <div className="bg-custom-bgColor h-full justify-center items-center max-w-full ">
         <Hero bgSrc={"/bg.jpg"}>
           <div className="px-5 my-0 sm:my-20 w-full flex flex-col items-center justify-center text-center h-1/2 ">
-            <h1 className="text-white text-[22px] sm:text-[62px] leading-snug font-head ">
+            <h1 className="text-white text-xl sm:text-6xl leading-snug font-head ">
               Professional Wheel Custom Coloring – The Finest Rim Painting &
               Powder Coating
             </h1>
-            <h1 className=" text-custom-primary text-[16px] sm:text-[38px] leading-snug w-full font-head ">
+            <h1 className=" text-custom-primary text-base sm:text-4xl leading-snug w-full font-head ">
               Let us customize your wheels with high-quality finishes in the
               colors of your choice.
             </h1>
