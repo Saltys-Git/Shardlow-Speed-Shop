@@ -26,6 +26,8 @@ A Wheel &amp; Rim Repair Service in Shardlow, Derby DE72 2HL, United Kingdom
 	* Image Slider 
 		>[React Compare Slider Library](https://www.npmjs.com/package/react-compare-slider)  with item label as before and after, changePositionOnHover
 	* Nodemailer. (Currently Not Required)
+	* File Chooser
+   		>[React Drag and Drop Files](https://www.npmjs.com/package/react-drag-drop-files)
 
 ## Initial Folder Structure
 * Root
@@ -73,7 +75,7 @@ A Wheel &amp; Rim Repair Service in Shardlow, Derby DE72 2HL, United Kingdom
 				* favicon.ico
 				* globals.css
 				* Navbar.tsx
-     				* Footer.tsx
+			* Footer.tsx
 				* layout.tsx
 				* page.tsx
 		* components 
