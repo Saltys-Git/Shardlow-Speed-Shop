@@ -15,7 +15,7 @@ const Hero = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="relative w-full min-h-[430px] sm:min-h-dvh lg:min-h-lvh ">
+    <div className="relative w-full aspect-square sm:aspect-[2.5/1]">
       <Image
         src={bgSrc}
         layout="fill"
@@ -23,10 +23,9 @@ const Hero = ({
         objectPosition="center"
         alt="Background Image"
       />
-      <div className="absolute inset-0 bg-black bg-opacity-70">
+      <div className="absolute inset-0 bg-black bg-opacity-70 p-5 sm:p-8">
         <div
-          className="border-2 sm:border-8 border-[#C6C71D] rounded-md sm:rounded-2xl h-[23rem] sm:h-[760px] m-5 sm:m-24 relative bg-[#0e0c0b] bg-opacity-10 text-white p-0 sm:px-10 "
-          style={{ backdropFilter: "blur(8px)" }}
+          className="flex flex-col border-1 sm:border-3 border-[#C6C71D] rounded-md sm:rounded-2xl h-full relative bg-[#0e0c0b] bg-opacity-10 text-white p-2 backdrop-blur"
         >
           <NavbarComponent />
           {children}
