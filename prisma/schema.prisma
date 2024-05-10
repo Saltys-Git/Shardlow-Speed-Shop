@@ -8,21 +8,23 @@ datasource db {
 }
 
 model Images {
-  id        Int      @id @default(autoincrement())
-  url       String
-  serviceId  String?
-  updatedAt DateTime @updatedAt
+  id            Int       @id @default(autoincrement())
+  url           String[]  
+  serviceId     String?
+  showInGallery Boolean
+  uploadedAt    DateTime  @updatedAt
 }
 
 model Users {
   id            Int             @id @default(autoincrement())
   email         String
   loginSessions LoginSessions[]
+  tempOTP       String
 }
 
 model LoginSessions {
-  id       Int      @id @default(autoincrement())
-  loggedAt DateTime
+  id       Int                   @id @default(autoincrement())
+  loggedAt DateTime @updatedAt
   ip       String
   Users    Users    @relation(fields: [id], references: [id])
 }

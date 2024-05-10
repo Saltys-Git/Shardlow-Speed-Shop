@@ -7,30 +7,37 @@ const prisma = new PrismaClient();
 export async function POST(req: Request) {
   const data = await req.formData();
 
-  const file = data.get("image") as unknown as File;
-  const serverId = "hello";
+  const files = data.getAll("image") as File[];
+  const serviceId = data.get("serviceId") as string;
+  const checkbox: boolean = !!data.get("checkbox");
 
-  if (!file) {
+  if (files.length === 0) {
     return NextResponse.json({ error: "No file uploaded" }, { status: 400 });
   }
+
   try {
-    const byteData = await file.arrayBuffer();
-    const buffer = Buffer.from(byteData);
-    const path = `./public/images/${file.name}`;
+    const urls = await Promise.all(
+      files.map(async (file) => {
+        const byteData = await file.arrayBuffer();
+        const buffer = Buffer.from(byteData);
+        const path = `./public/images/${file.name}`;
 
-    console.log("path & buffer", path, buffer);
+        await writeFile(path, buffer);
 
-    await writeFile(path, buffer);
+        return path;
+      })
+    );
 
-    const createdImage = await prisma.images.create({
-      data: {
-        url: path,
-        serverid: serverId ?? null,
-      },
+    const createdImages = await prisma.images.createMany({
+      data: urls.map((url) => ({
+        url: [url],
+        serviceId: serviceId ?? null,
+        showInGallery: checkbox ?? false,
+      })),
     });
 
     return NextResponse.json(
-      { image: createdImage, path: path },
+      { images: createdImages, paths: urls },
       { status: 200 }
     );
   } catch (error) {
