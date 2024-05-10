@@ -7,10 +7,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model TableName {
+model Images {
   id        Int      @id @default(autoincrement())
   url       String
-  serverid  String?
+  serviceId  String?
   updatedAt DateTime @updatedAt
 }
 
@@ -24,6 +24,5 @@ model LoginSessions {
   id       Int      @id @default(autoincrement())
   loggedAt DateTime
   ip       String
-  userId   Int
-  Users    Users    @relation(fields: [userId], references: [id])
+  Users    Users    @relation(fields: [id], references: [id])
 }

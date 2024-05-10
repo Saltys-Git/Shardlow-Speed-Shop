@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./Providers";
 
-import Footer from "./(client-panel)/Footer";
+import Footer from "./Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",

@@ -7,7 +7,7 @@ import { ChevronRight } from "lucide-react";
 
 // Native Imports
 import { Button } from "@/components/ui/button";
-import Hero from "../components/Hero";
+import Hero from "../../components/Hero";
 import Slider from "@/components/card/Slider";
 import ModalComponent from "@/components/ModelComponent";
 

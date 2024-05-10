@@ -247,17 +247,16 @@ const Gallery = () => {
             Our work speaks for itself.
           </h1>
           <div className="container">
-            <Tabs className="bg-[#EBEBD4] w-full rounded-xl text-custom-primary">
+            <Tabs className="justify-center items-center min-w-full rounded-xl text-custom-primary ">
               {items.map((item, index) => (
                 <Tab
                   key={index}
-                  className="uppercase text-black text-[5px] sm:text-[15px] text-center  sm:py-2 font-light
-  sm:px-[54px] "
+                  className="uppercase text-black text-[5px] sm:text-[15px]  sm:py-2 font-light px-1 sm:px-3"
                   title={item.name}
                 >
                   {/* section 1 */}
                   {item.name === "MOBILE WHEEL REPAIR" && (
-                    <section className=" grid grid-cols-2 sm:grid-cols-3 gap-5 py-5 items-center justify-center sm:py-20">
+                    <section className=" grid grid-cols-2 sm:grid-cols-3 gap-2 py-5 items-center justify-center  max-w-full">
                       {images1.map((item, index) => (
                         <div
                           key={index}
