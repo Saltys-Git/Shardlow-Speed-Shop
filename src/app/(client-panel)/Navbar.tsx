@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 import {
   AlignJustify,
   ChevronDown,
@@ -43,7 +51,6 @@ import {
 } from "@/components/ui/accordion";
 
 const NavbarComponent = () => {
-  const pathname = usePathname();
   const menuItems = [
     { name: "Home", path: "/" },
     {
@@ -73,8 +80,7 @@ const NavbarComponent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
-  const [dropdown1Open, setDropdown1Open] = useState(false);
-  const [dropdown2Open, setDropdown2Open] = useState(false);
+
   const handleLinkClick = (name: string) => {
     setActiveLink(name);
   };
@@ -87,6 +93,37 @@ const NavbarComponent = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  const repair = [
+    { name: "Sand Blasting", path: "/wheel-repair-services/sand-blasting" },
+    { name: "Diamond Cutting", path: "/wheel-repair-services/diamond-cutting" },
+    { name: "Crack Repair", path: "/wheel-repair-services/crack-repair" },
+    { name: "Alloy Welding", path: "/wheel-repair-services/alloy-welding" },
+    {
+      name: "Wheel Straightning",
+      path: "/wheel-repair-services/wheel-straightning",
+    },
+    { name: "Curve Repair", path: "/wheel-repair-services/curve-repair" },
+    {
+      name: "Custom or Bespoke Request",
+      path: "/wheel-repair-services/custom-or-bespoke-request",
+    },
+  ];
+
+  const customColoring = [
+    {
+      name: "Chemical Dip or Strip",
+      path: "/wheel-custom-coloring/chemical-dip",
+    },
+    { name: "Powder Coating", path: "/wheel-custom-coloring/powder-coating" },
+  ];
+
+  const company = [
+    { name: "About Us", path: "/about-us" },
+    { name: "Contact Us", path: "/contact-us" },
+    { name: "Careers", path: "/careers" },
+    { name: "Reviews", path: "/reviews" },
+  ];
 
   return (
     <Navbar
@@ -108,74 +145,138 @@ const NavbarComponent = () => {
         </p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        {menuItems.map((item, idx) => (
-          <NavbarItem isActive={item.path === pathname}>
-            {item.items ? (
-              <Dropdown
-                className="bg-custom-bgColor"
-                type="listbox"
-                closeOnSelect={true}
-                onOpenChange={(isOpen) => {
-                  if (item.name === "Wheel Repair Services") {
-                    setDropdown1Open(isOpen);
-                  } else if (item.name === "Wheel Custom Coloring") {
-                    setDropdown2Open(isOpen);
-                  }
-                }}
-              >
-                <DropdownTrigger>
-                  <div
-                    className={`hover:text-custom-primary flex justify-center items-center ${
-                      item.path === pathname && "text-custom-primary"
-                    }`}
-                  >
-                    <span onClick={() => handleLinkClick(item.name)}>
-                      {item.name}
-                    </span>
-                    {item.name === "Wheel Repair Services" ? (
-                      dropdown1Open ? (
-                        <ChevronUp />
-                      ) : (
-                        <ChevronDown />
-                      )
-                    ) : dropdown2Open ? (
-                      <ChevronUp />
-                    ) : (
-                      <ChevronDown />
-                    )}
-                  </div>
-                </DropdownTrigger>
+        <ul className="flex justify-center items-center space-x-5 text-lg">
+          <li
+            className={`hover:text-custom-primary ${
+              activeLink === "Home" ? "text-custom-primary" : ""
+            }`}
+          >
+            <Link href={"/"} onClick={() => handleLinkClick("Home")}>
+              Home
+            </Link>
+          </li>
 
-                <DropdownMenu>
-                  {item.items.map((subItem, subIdx) => (
-                    <DropdownItem
-                      key={subIdx}
-                      className="hover:text-black font-light text-white hover:bg-transparent"
-                      title={subItem.name}
-                      href={subItem.path}
-                      showDivider={true}
-                    />
+          <li
+            className={`hover:text-custom-primary ${
+              activeLink === "Wheel Repair Services"
+                ? "text-custom-primary"
+                : ""
+            }`}
+          >
+            <NavigationMenu>
+              <NavigationMenuItem>
+                {" "}
+                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent ">
+                  <Link
+                    href="/wheel-repair-services"
+                    onClick={() => handleLinkClick("Wheel Repair Service")}
+                  >
+                    Wheel Repair Service{" "}
+                  </Link>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent
+                  className="min-w-[250px] flex flex-col bg-custom-bgColor 
+                text-white border-none
+                  "
+                >
+                  {repair.map((item, idx) => (
+                    <Link
+                      key={idx}
+                      href={item.path}
+                      className="text-base font-head hover:text-black hover:bg-custom-primary py-2 p-2"
+                    >
+                      {item.name}
+                    </Link>
                   ))}
-                </DropdownMenu>
-              </Dropdown>
-            ) : (
-              <Link
-                href={item.path}
-                className={`hover:text-custom-primary ${
-                  item.path === pathname && "text-custom-primary"
-                }`}
-              >
-                {item.name}
-              </Link>
-            )}
-          </NavbarItem>
-        ))}
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenu>
+          </li>
+          <li
+            className={`hover:text-custom-primary ${
+              activeLink === "Wheel Custom Colering"
+                ? "text-custom-primary"
+                : ""
+            }`}
+          >
+            <NavigationMenu>
+              <NavigationMenuItem>
+                {" "}
+                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent ">
+                  <Link
+                    href="/wheel-custom-coloring"
+                    onClick={() => handleLinkClick("Wheel Custom Coloring")}
+                  >
+                    Wheel Custom Coloring{" "}
+                  </Link>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent
+                  className="min-w-[250px] flex flex-col bg-custom-bgColor 
+                text-white border-none
+                  "
+                >
+                  {customColoring.map((item, idx) => (
+                    <Link
+                      key={idx}
+                      href={item.path}
+                      className="text-base font-head hover:text-black hover:bg-custom-primary py-2 p-2"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenu>
+          </li>
+          <li
+            className={`hover:text-custom-primary ${
+              activeLink === "Company" ? "text-custom-primary" : ""
+            }`}
+          >
+            <NavigationMenu>
+              <NavigationMenuItem>
+                {" "}
+                <NavigationMenuTrigger
+                  className="bg-transparent hover:bg-transparent "
+                  onClick={() => handleLinkClick("Company")}
+                >
+                  Company
+                </NavigationMenuTrigger>
+                <NavigationMenuContent
+                  className="min-w-[250px] flex flex-col bg-custom-bgColor 
+                text-white border-none
+                  "
+                >
+                  {company.map((item, idx) => (
+                    <Link
+                      key={idx}
+                      href={item.path}
+                      className="text-base font-head hover:text-black hover:bg-custom-primary py-2 p-2"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenu>
+          </li>
+          <li
+            className={`hover:text-custom-primary ${
+              activeLink === "Gallery" ? "text-custom-primary" : ""
+            }`}
+          >
+            <Link href={"/gallery"} onClick={() => handleLinkClick("Gallery")}>
+              Gallery
+            </Link>
+          </li>
+        </ul>
       </NavbarContent>
+
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
             onClick={openModal}
-            className="bg-custom-primary text-lg rounded-xl px-10 hidden sm:flex"
+            className="bg-custom-primary text-lg rounded-xl px-10 hidden sm:flex hover:bg-custom-primary"
           >
             Get a Quote
           </Button>
