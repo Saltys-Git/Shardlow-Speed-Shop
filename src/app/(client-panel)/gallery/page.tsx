@@ -230,7 +230,6 @@ const Gallery = () => {
     },
   ];
 
-  const color = "#C6C71D";
   return (
     <>
       <div className="bg-custom-bgColor min-h-screen justify-center items-center max-w-full text-white ">
@@ -242,25 +241,30 @@ const Gallery = () => {
           </div>
         </Hero>
 
-        <section>
+        <section className="container">
           <h1 className="text-[32px]  sm:text-[62px] text-white  text-center sm:py-16 py-5 italic font-head tracking-wide  container">
             Our work speaks for itself.
           </h1>
-          <div className="container">
-            <Tabs className="justify-center items-center min-w-full rounded-xl text-custom-primary ">
+          <div className="">
+            {/* <Tabs className="justify-center items-center min-w-full rounded-xl text-custom-primary "> */}
+            <Tabs
+              classNames={{
+                base: " bg-[#EBEBD4] w-full rounded-xl data-selected:bg-custom-primary ",
+                tabList: "bg-[#EBEBD4]  data-selected:bg-custom-primary",
+                tab: "text-black bg-[#EBEBD4] hover:bg-custom-primary hover:text-white  uppercase text-black text-[5px] sm:text-[15px]  sm:py-2 font-light px-1 sm:px-[51px] justify-between data-selected:bg-custom-primary",
+                tabContent: "hover:text-white ",
+              }}
+            >
+              {" "}
               {items.map((item, index) => (
-                <Tab
-                  key={index}
-                  className="uppercase text-black text-[5px] sm:text-[15px]  sm:py-2 font-light px-1 sm:px-3"
-                  title={item.name}
-                >
+                <Tab key={index} title={item.name}>
                   {/* section 1 */}
                   {item.name === "MOBILE WHEEL REPAIR" && (
-                    <section className=" grid grid-cols-2 sm:grid-cols-3 gap-2 py-5 items-center justify-center  max-w-full">
+                    <section className="opac grid grid-cols-2 sm:grid-cols-4 gap-1 sm:gap-4 py-5 items-center justify-center  max-w-full ">
                       {images1.map((item, index) => (
                         <div
                           key={index}
-                          className="w-[160px] min-h-[160px] sm:w-[420px] sm:min-h-[420px] rounded-xl  sm:my-5"
+                          className="w-[160px] min-h-[160px] sm:w-full sm:min-h-[300px] rounded-xl  sm:my-5"
                         >
                           <ReactCompareSlider
                             itemOne={
@@ -268,7 +272,7 @@ const Gallery = () => {
                                 <ReactCompareSliderImage
                                   src={item.image1[0].srcOne}
                                   alt={item.image1[0].alt}
-                                  className="w-[160px] min-h-[160px] sm:w-[420px] sm:min-h-[420px] object-fill rounded-xl"
+                                  className="w-[160px] min-h-[160px] sm:w-full sm:min-h-[300px] object-fill rounded-xl"
                                 />
                                 <div className="absolute top-0 left-0 text-black m-4 p-1  tracking-wider bg-custom-primary rounded-lg sm:text-xl">
                                   Before
@@ -280,7 +284,7 @@ const Gallery = () => {
                                 <ReactCompareSliderImage
                                   src={item.image1[1].srcTwo}
                                   alt={item.image1[1].alt}
-                                  className="w-[160px] min-h-[160px] sm:w-[420px] sm:min-h-[420px] object-fill rounded-xl"
+                                  className="w-[160px] min-h-[160px] sm:w-full sm:min-h-[300px] object-fill rounded-xl"
                                 />
                                 <div className="absolute top-0 right-0 text-black m-4 p-1  tracking-wider bg-custom-primary rounded-lg sm:text-xl">
                                   After
