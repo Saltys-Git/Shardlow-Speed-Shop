@@ -1,38 +1,26 @@
+// Native React imports
 import React, { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import {
-  AlignJustify,
-  ChevronDown,
-  ChevronRight,
-  ChevronUp,
-} from "lucide-react";
+// global im ports NextUi
+import { AlignJustify } from "lucide-react";
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenu,
-  NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { ScrollShadow } from "@nextui-org/scroll-shadow";
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-} from "@nextui-org/react";
 
+// global imports shadcn
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import ModalComponent from "@/components/ModelComponent";
 import {
   Sheet,
   SheetContent,
@@ -42,7 +30,6 @@ import {
   SheetFooter,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import ModalComponent from "@/components/ModelComponent";
 import {
   AccordionContent,
   AccordionItem,
@@ -51,49 +38,59 @@ import {
 } from "@/components/ui/accordion";
 
 const NavbarComponent = () => {
+  // mobile menu nav
   const menuItems = [
     { name: "Home", path: "/" },
     {
       name: "Wheel Repair Services",
       path: "/wheel-repair-services",
       items: [
-        { name: "service 1", path: "1" },
-        { name: "Service 2", path: "2" },
-        { name: "service 3", path: "3" },
-        { name: "service 4", path: "4" },
+        { name: "Sand Blasting", path: "/wheel-repair-services/sand-blasting" },
+        {
+          name: "Diamond Cutting",
+          path: "/wheel-repair-services/diamond-cutting",
+        },
+        { name: "Crack Repair", path: "/wheel-repair-services/crack-repair" },
+        { name: "Alloy Welding", path: "/wheel-repair-services/alloy-welding" },
+        {
+          name: "Wheel Straightening",
+          path: "/wheel-repair-services/wheel-straightening",
+        },
+        { name: "Curve Repair", path: "/wheel-repair-services/curve-repair" },
+        {
+          name: "Custom or Bespoke Request",
+          path: "/wheel-repair-services/custom-or-bespoke-request",
+        },
       ],
     },
     {
       name: "Wheel Custom Coloring",
       path: "/wheel-custom-coloring",
       items: [
-        { name: "service 1", path: "1" },
-        { name: "Service 2", path: "2" },
-        { name: "service 3", path: "3" },
-        { name: "service 4", path: "4" },
+        {
+          name: "Chemical Dip or Strip",
+          path: "/wheel-custom-coloring/chemical-dip",
+        },
+        {
+          name: "Powder Coating",
+          path: "/wheel-custom-coloring/powder-coating",
+        },
       ],
     },
-    { name: "Company", path: "/company" },
+    {
+      name: "Company",
+      path: "/company",
+      items: [
+        { name: "About Us", path: "/about-us" },
+        { name: "Contact Us", path: "/contact-us" },
+        { name: "Careers", path: "/careers" },
+        { name: "Reviews", path: "/reviews" },
+      ],
+    },
     { name: "Gallery", path: "/gallery" },
   ];
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("Home");
-
-  const handleLinkClick = (name: string) => {
-    setActiveLink(name);
-  };
-
-  const openModal = () => {
-    setIsModalOpen(true);
-    setIsSheetOpen(false);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
+  // large screen navlink data
   const repair = [
     { name: "Sand Blasting", path: "/wheel-repair-services/sand-blasting" },
     { name: "Diamond Cutting", path: "/wheel-repair-services/diamond-cutting" },
@@ -125,6 +122,25 @@ const NavbarComponent = () => {
     { name: "Reviews", path: "/reviews" },
   ];
 
+  // active link and model toggle logic
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("Home");
+
+  // navlink active logic
+  const handleLinkClick = (name: string) => {
+    setActiveLink(name);
+  };
+  // model togole logic
+  const openModal = () => {
+    setIsModalOpen(true);
+    setIsSheetOpen(false);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <Navbar
       shouldHideOnScroll
@@ -144,6 +160,9 @@ const NavbarComponent = () => {
           Shardlow Speed Shop
         </p>
       </NavbarBrand>
+
+      {/* large screen navbar content  */}
+
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <ul className="flex justify-center items-center space-x-5 text-lg">
           <li
@@ -271,7 +290,7 @@ const NavbarComponent = () => {
           </li>
         </ul>
       </NavbarContent>
-
+      {/* mobile screen navbar content  */}
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
@@ -284,7 +303,7 @@ const NavbarComponent = () => {
             <SheetTrigger className="flex sm:hidden">
               <AlignJustify color="#C6C71D" />
             </SheetTrigger>
-            <SheetContent className="bg-custom-bgColor text-white">
+            <SheetContent className="bg-custom-bgColor text-white max-h-full">
               <ScrollShadow hideScrollBar className="w-full h-screen pb-16">
                 <SheetHeader className="text-2xl py-5 text-start">
                   Shardlow Speed Shop
@@ -292,28 +311,26 @@ const NavbarComponent = () => {
                 {menuItems.map((item, idx) => (
                   <SheetTitle key={idx} className="py-3">
                     {item.items ? (
-                      <>
-                        <Accordion type="single" collapsible>
-                          <AccordionItem
-                            className="text-[#C6C71D] text-base font-light border-none"
-                            value={item.name}
-                          >
-                            <AccordionTrigger>{item.name}</AccordionTrigger>
-                            <AccordionContent>
-                              {item.items.map((subItem, subIdx) => (
-                                <li key={subIdx} className="list-none pt-5">
-                                  <Link
-                                    href={subItem.path}
-                                    className="text-[#C6C71D] text-base font-light"
-                                  >
-                                    {subItem.name}
-                                  </Link>
-                                </li>
-                              ))}
-                            </AccordionContent>
-                          </AccordionItem>
-                        </Accordion>
-                      </>
+                      <Accordion type="single" collapsible>
+                        <AccordionItem
+                          className="text-[#C6C71D] text-base font-light border-none"
+                          value={item.name}
+                        >
+                          <AccordionTrigger>{item.name}</AccordionTrigger>
+                          <AccordionContent>
+                            {item.items.map((subItem, subIdx) => (
+                              <li key={subIdx} className="list-none pt-5">
+                                <Link
+                                  href={subItem.path}
+                                  className="text-[#C6C71D] text-sm font-light"
+                                >
+                                  {subItem.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
                     ) : (
                       <Link
                         href={item.path}
