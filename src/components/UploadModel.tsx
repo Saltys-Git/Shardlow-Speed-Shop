@@ -12,6 +12,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectItem } from "@nextui-org/select";
 import Image from "next/image";
+import { ArrowRightLeft } from "lucide-react";
 
 export default function UploadModel({ isOpen, onClose }) {
   //   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -57,6 +58,11 @@ export default function UploadModel({ isOpen, onClose }) {
       };
       reader.readAsDataURL(file);
     }
+  };
+  const handleSwipe = () => {
+    // Swap the image previews
+    setImagePreviewBefore(imagePreviewAfter);
+    setImagePreviewAfter(imagePreviewBefore);
   };
 
   return (
@@ -153,7 +159,7 @@ export default function UploadModel({ isOpen, onClose }) {
                   </TabsContent>
 
                   <TabsContent value="Compare">
-                    <div className="flex justify-center items-center space-x-10 w-full">
+                    <div className="flex justify-center items-center space-x-2 w-full relative">
                       <div className="w-full">
                         <div>
                           <h1 className="text-center font-inter text-sm">
@@ -199,6 +205,11 @@ export default function UploadModel({ isOpen, onClose }) {
                             </div>
                           )}
                         </div>
+                      </div>
+                      <div className="">
+                        <button onClick={handleSwipe} className="">
+                          <ArrowRightLeft />
+                        </button>
                       </div>
                       <div className="w-full">
                         <div>

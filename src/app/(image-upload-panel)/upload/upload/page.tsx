@@ -119,14 +119,17 @@ const page = () => {
                 {" "}
                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-1 sm:gap-3 container">
                   <Card className="relative p-0">
-                    <Button className="w-full h-full relative rounded-md bg-white overflow-hidden">
+                    <Button
+                      onClick={openModal}
+                      className="w-full h-full relative rounded-md bg-white overflow-hidden"
+                    >
                       <CardContent className="p-0 relative">
                         <Image
                           src={"/uploadButton.png"}
                           objectFit="cover"
                           alt={`picture `}
-                          width={500}
-                          height={500}
+                          width={300}
+                          height={300}
                           className="object-cover rounded-lg"
                         />{" "}
                         <p className="absolute bottom-0 left-0 right-0 z-10 text-xl font-semibold text-center bg-white">
@@ -187,7 +190,10 @@ const page = () => {
                 {" "}
                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-1 sm:gap-3 container">
                   <Card className="relative p-0">
-                    <Button className="w-full h-full relative rounded-md bg-white overflow-hidden">
+                    <Button
+                      onClick={openModal}
+                      className="w-full h-full relative rounded-md bg-white overflow-hidden"
+                    >
                       <CardContent className="p-0 relative">
                         <Image
                           src={"/uploadButton.png"}
@@ -254,7 +260,10 @@ const page = () => {
               <TabsContent value="section 3">
                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-1 sm:gap-3 container">
                   <Card className="relative p-0">
-                    <Button className="w-full h-full relative rounded-md bg-white overflow-hidden">
+                    <Button
+                      onClick={openModal}
+                      className="w-full h-full relative rounded-md bg-white overflow-hidden"
+                    >
                       <CardContent className="p-0 relative">
                         <Image
                           src={"/uploadButton.png"}
@@ -322,7 +331,10 @@ const page = () => {
                 {" "}
                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-1 sm:gap-3 container">
                   <Card className="relative p-0">
-                    <Button className="w-full h-full relative rounded-md bg-white overflow-hidden">
+                    <Button
+                      onClick={openModal}
+                      className="w-full h-full relative rounded-md bg-white overflow-hidden"
+                    >
                       <CardContent className="p-0 relative">
                         <Image
                           src={"/uploadButton.png"}
