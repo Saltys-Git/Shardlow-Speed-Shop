@@ -106,6 +106,7 @@ const ModalComponent: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
       isKeyboardDismissDisabled={true}
       size="3xl"
       backdrop={backdrop}
+      placement="center"
     >
       <ModalContent className="p-10">
         <>

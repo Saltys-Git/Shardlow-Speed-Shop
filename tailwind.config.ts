@@ -23,11 +23,13 @@ const config: Config = {
     fontFamily: {
       sans: ["Helvetica Neue"],
       head: ["Oswald"],
+      inter: ["Inter"],
     },
     extend: {
       fontFamily: {
         head: "Oswald",
         sans: ["Helvetica Neue"],
+        inter: ["Inter"],
       },
       colors: {
         custom: {
