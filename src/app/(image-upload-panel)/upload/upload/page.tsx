@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -8,24 +9,18 @@ import {
   ReactCompareSlider,
   ReactCompareSliderImage,
 } from "react-compare-slider";
+import UploadModel from "@/components/UploadModel";
 
 const page = () => {
-  const imageUrls = [
-    "/img.jpg",
-    "/img.jpg",
-    "/img.jpg",
-    "/img.jpg",
-    "/img.jpg",
-    "/img.jpg",
-    "/img.jpg",
-    "/img.jpg",
-    "/img.jpg",
-    "/img.jpg",
-    "/img.jpg",
-    "/img.jpg",
-    "/img.jpg",
-    "/img.jpg",
-  ];
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <>
@@ -53,7 +48,10 @@ const page = () => {
                 {" "}
                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-1 sm:gap-3 container">
                   <Card className="relative p-0">
-                    <Button className="w-full h-full relative rounded-md bg-white overflow-hidden">
+                    <Button
+                      onClick={openModal}
+                      className="w-full h-full relative rounded-md bg-white overflow-hidden"
+                    >
                       <CardContent className="p-0 relative">
                         <Image
                           src={"/uploadButton.png"}
@@ -391,7 +389,10 @@ const page = () => {
               <TabsContent value="section 5">
                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-1 sm:gap-3 container">
                   <Card className="relative p-0">
-                    <Button className="w-full h-full relative rounded-md bg-white overflow-hidden">
+                    <Button
+                      onClick={openModal}
+                      className="w-full h-full relative rounded-md bg-white overflow-hidden"
+                    >
                       <CardContent className="p-0 relative">
                         <Image
                           src={"/uploadButton.png"}
@@ -459,6 +460,7 @@ const page = () => {
           </div>
         </div>
       </section>
+      <UploadModel isOpen={isModalOpen} onClose={closeModal} />
     </>
   );
 };
