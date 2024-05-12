@@ -11,13 +11,13 @@ import CarouselSection from "@/components/services/CarouselSection";
 import FAQSection from "@/components/services/FAQSection";
 
 import { Spinner } from "@nextui-org/spinner";
-const dynamicColorService = ({
+export default function DynamicColorService ({
   params,
 }: {
   params: {
     service: string;
   };
-}) => {
+}) {
   const [serviceData, setServiceData] = useState<any>(null);
 
   useEffect(() => {
@@ -75,5 +75,3 @@ const dynamicColorService = ({
     </>
   );
 };
-
-export default dynamicColorService;
