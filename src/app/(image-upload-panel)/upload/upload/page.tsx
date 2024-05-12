@@ -11,7 +11,7 @@ import {
 } from "react-compare-slider";
 import UploadModel from "@/components/UploadModel";
 
-const page = () => {
+const Page = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
