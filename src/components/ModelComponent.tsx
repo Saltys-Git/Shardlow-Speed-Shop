@@ -47,7 +47,6 @@ const ModalComponent: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
     "Submit Request",
   ];
 
-
   const {
     register,
     handleSubmit,
