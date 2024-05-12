@@ -25,19 +25,19 @@ const Home: React.FC = () => {
   return (
     <div className="bg-custom-bgColor h-full justify-center items-center max-w-full ">
       <Hero bgSrc={"/bg.jpg"}>
-        <div className="px-5 my-5 sm:my-20   w-full sm:w-1/2">
-          <h1 className="text-custom-primary text-3xl sm:text-8xl leading-snug w-2/3 font-heading font-head tracking-wide">
+        <div className="px-5 sm:px-10 my-5 sm:my-20 w-full h-full sm:w-1/2 justify-center flex flex-col">
+          <h1 className="text-custom-primary text-3xl sm:text-5xl leading-snug sm:w-2/3 font-heading font-head tracking-wide">
             Trust Us To Repair Your
             <span className="text-white"> WHEELS.</span>
           </h1>
           <p className="text-xs sm:text-xl leading-snug py-2 tracking-wide">
-            The wheel repair experts. WheelsOnsite® brings high quality mobile
+            The wheel repair experts. Shardlow Speed Shop brings high quality mobile
             wheel and rim repair directly to you.
           </p>
           <Button
             variant={"outline"}
             onClick={openModal}
-            className="bg-transparent border-custom-primary my-8 rounded-xl hover:bg-custom-primary hover:text-white hover:underline"
+            className="bg-transparent w-fit border-custom-primary my-2 sm:my-4 rounded-xl hover:bg-custom-primary hover:text-black"
           >
             Get A Quote
           </Button>
@@ -128,8 +128,8 @@ const Home: React.FC = () => {
             Why Choose Shardlow Speed Shop ltd
           </h1>
           <p className=" py-8 text-[15px] sm:text-[20px] relative z-10">
-            We are the world’s largest provider of wheel refinishing, wheel
-            remanufacturing and wheel replacement. All our wheel repair
+            We are one the largest provider of wheel refinishing, wheel
+            re-manufacturing and wheel replacement. All our wheel repair
             processes are thoroughly researched and evaluated. Each technician
             is trained and certified. Whether you want to get your wheels
             refinished or paint. We’ll get you back on the road.
@@ -142,27 +142,25 @@ const Home: React.FC = () => {
           </Button>
         </div>
       </section>
-      {/* scadule section */}
+      {/* schedule section */}
       <section className=" w-full h-full">
         <div
           className="flex flex-col
        justify-center items-center p-8 sm:py-20 text-center text-white"
         >
-          <h1 className="text-[25px] sm:text-[62px] py-6 sm:py-10 font-head tracking-wide">
-            Schedule An Appointment
+          <h1 className="text-2xl sm:text-6xl py-3 sm:py-6 font-head tracking-wide">
+            Get Your Wheels Scheduled
           </h1>
-          <p className=" w-full sm:w-2/3  text-[15px] sm:text-[20px]">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
-            corrupti corporis nesciunt? Aliquam, velit tempora. Harum
-            praesentium deserunt illo ex quia eos ab commodi nemo quaerat,
-            perspiciatis, atque ut laboriosam.
+          <p className="w-full sm:w-2/3 text-sm sm:text-lg">
+            Schedule today and let us help you get your wheels looking as good as new. Our mobile wheel and rim repair service is backed by both a 100% satisfaction guarantee and lifetime warranty on delamination.
           </p>
           <div>
             <Button
               variant={"outline"}
-              className="bg-transparent border-custom-primary my-8 rounded-2xl px-8 hover:bg-custom-primary hover:text-white hover:underline"
+              onClick={openModal}
+              className="bg-transparent border-custom-primary my-4 rounded-2xl px-8 hover:bg-custom-primary hover:text-black"
             >
-              Get Startet
+              Get Quote
             </Button>
           </div>
         </div>

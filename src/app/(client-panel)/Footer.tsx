@@ -2,28 +2,31 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaYoutube, FaLinkedin } from "react-icons/fa";
+
+
+import {FaYoutube, FaLinkedin, FaPhoneAlt} from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io";
-import { FaXTwitter } from "react-icons/fa6";
+import {FaMapLocationDot, FaXTwitter} from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 
-const wheelRepair = [
-  "Sand Blasting",
-  "Dimond Cutting",
-  "Crack Repair",
-  "Alloy Welding",
-  "Wheel Straightening",
-  "Curve Repair",
-  "Custom or Bespoke Request",
-];
 
-const cleanedLinks = [
-  "Career",
-  "Terms & Conditions",
-  "Privacy Policy",
-  "Company",
-  "Gallery",
-];
+import { Separator } from "@/components/ui/separator";
+import { Label } from "@/components/ui/label";
+
+const helpAndInformationLinks = [
+  {
+    name: "Career",
+    href: "#",
+  },
+  {
+    name: "Terms & Conditions",
+    href: "#",
+  },
+  {
+    name: "Privacy Policy",
+    href: "#",
+  },
+]
 
 const socialMediaLinks = [
   { icon: <IoLogoFacebook color="#a3a325" />, href: "#" },
@@ -35,101 +38,64 @@ const socialMediaLinks = [
 
 const Footer = () => {
   return (
-    <section className="bg-white sm:bg-[#EBEBD4] py-14">
-      <div className="container mx-auto ">
-        <div className="flex py-3 space-x-3 items-center ">
-          <div>
-            <Image
-              src={"/logo.png"}
-              height={25}
-              width={25}
-              alt="logo"
-              className="sm:w-10 rounded-lg"
-            />
-          </div>
-          <div className="text-[28px] sm:text-[50px] font-head tracking-wide ">
-            Shardlow Speed Shop
-          </div>
-        </div>
-        <div className="flex flex-col sm:flex-row justify-around items-start sm:space-x-10 ">
-          <div className="flex justify-around items-start  w-full h-full ">
-            <div className=" w-full">
-              <h1 className="py-2 text-[20px] sm:text-[32px] text-custom-primary">
-                Wheel Repair Service
-              </h1>
-              <ul>
-                {wheelRepair.map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="text-sm sm:text-base py-1.5 sm:py-2 font-light tracking-wider"
-                  >
-                    • {item}
-                  </li>
-                ))}
-              </ul>
-
-              <h1 className="py-2 text-[17px] sm:text-[32px] text-custom-primary">
-                Wheel Custom Coloring
-              </h1>
-              <p className="text-[15px] sm:text-[18px] py-1 font-light tracking-wider">
-                • Custom Dip Or Strip
-              </p>
-            </div>
-            <div className="pl-2">
-              <ul>
-                {cleanedLinks.map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="text-[15px] sm:text-[25px] py-2 font-light tracking-wider "
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <div className="block sm:hidden ">
-                <p className="text-[13px] sm:text-[20px] py-2 text-wrap font-light  tracking-wider">
-                  Become an AWRS insider! Join Our Email List.
-                </p>
-                <input
-                  type="text"
-                  placeholder="Email Address"
-                  className="bg-gray-100 text-[13px] sm:text-[18px] p-1 text-black rounded-2xl w-[100px] sm:w-[486px] sm:h-[40px] font-light tracking-wider"
-                />
-                <button className="text-[13px] sm:text-[20px] bg-transparent border border-[#a3a325] my-2 px-1 sm:px-2 mt-4 rounded-lg">
-                  Subscribe
-                </button>
-              </div>
+    <section className="bg-[#EBEBD4] pt-7 sm:pt-14 flex flex-col">
+      <div className="mx-auto px-4 sm:px-8 grid grid-cols-1 sm:grid-cols-3">
+        <section className="flex flex-col p-6">
+          <Image src={"/logo.png"} alt="logo" height={120} width={120}/>
+          <Label className="text-2xl font-bold mt-2">Shardlow Speed Shop</Label>
+          <div className="flex flex-row space-x-6 items-center sm:w-[80%] my-2">
+            <FaMapLocationDot className="w-7 h-7"/>
+            <div className="flex flex-col space-y-1">
+              <Label className="text-sm font-bold">Corporate Office:</Label>
+              <Label className="text-sm font-light">House #29, Road # 02, Sector # 07, Uttara, Dhaka-1230.</Label>
             </div>
           </div>
-          <div className=" h-full flex sm:flex-col justify-center items-start">
-            <div className="sm:py-5">
-              <h1 className="py-2 text-[22px] sm:text-[32px]">
-                Connect With Us
-              </h1>
-              <div className="flex items-center space-x-5 sm:space-x-10 ">
-                {socialMediaLinks.map((link, idx) => (
-                  <Link href={link.href} key={idx}>
-                    {React.cloneElement(link.icon, { size: "30" })}
-                  </Link>
-                ))}
-              </div>
+          <div className="flex flex-row space-x-6 items-center sm:w-[80%] my-2">
+            <FaPhoneAlt className="w-5 h-5"/>
+            <div className="flex flex-col space-y-1">
+              <Label className="text-sm font-bold">Call us:</Label>
+              <Link href="tel:0156484161" className="text-sm font-light">0156484161</Link>
             </div>
-            <div className="hidden sm:block">
-              <p className="text-[13px] sm:text-[20px] py-2 font-light  tracking-wider">
-                Become an AWRS insider! Join Our Email List.
-              </p>
-              <input
+          </div>
+        </section>
+        <section className="flex flex-col p-6 space-y-4">
+          <Label className="text-xl font-bold">Help & Information</Label>
+          <Separator className="w-[50px]"/>
+          {helpAndInformationLinks.map((item,idx) => (
+              <Link
+                  key={idx}
+                  href={item.href}
+                  className="text-base w-fit font-light hover:text-custom-primary transition-all ease-in-out duration-500 tracking-wider"
+              >
+                {item.name}
+              </Link>
+          ))}
+        </section>
+        <section className="flex flex-col p-6 space-y-4">
+          <Label className="text-xl font-bold">Stay Connected</Label>
+          <Separator className="w-[50px]"/>
+          <div className="flex flex-row space-x-4">
+            {socialMediaLinks.map((link, idx) => (
+                <Link href={link.href} key={idx}>
+                  {React.cloneElement(link.icon, { size: "24", className:"hover:scale-105 transition-all ease-in-out duration-200 " })}
+                </Link>
+            ))}
+          </div>
+          <div className="flex flex-col space-y-2">
+            <Label className="text-base font-light">Become an Shardlow insider! Join Our Email List.</Label>
+            <input
                 type="text"
                 placeholder="Email Address"
-                className="bg-gray-100 text-[13px] sm:text-[18px] p-1 text-black rounded-2xl w-[150px] sm:w-[486px] sm:h-[40px] font-light tracking-wider "
-              />
-              <button className="text-[13px] sm:text-[20px] bg-transparent border border-[#a3a325] my-2 px-1 sm:px-3 mt-4 rounded-lg hover:bg-custom-primary hover:text-white">
-                Subscribe
-              </button>
-            </div>
+                className="bg-gray-100 border border-[#a3a325] text-sm p-2 text-black rounded-xl w-full font-light"
+            />
+            <button className="w-[40%] text-base bg-transparent hover:bg-custom-primary border border-[#a3a325] mt-4 p-1 rounded-lg">
+              Subscribe
+            </button>
           </div>
-        </div>
+        </section>
       </div>
+      <Separator className="bg-custom-primary"/>
+      <Label className="text-sm w-full py-2 text-center">© Copyright 2024 | <span><Link href="/" className="font-bold">Shardlow Speed Shop</Link></span> By <a href="https://www.mytechys.co.uk" target="_blank" rel="noreferrer" className="font-bold">Techy&apos;s</a>.</Label>
     </section>
   );
 };

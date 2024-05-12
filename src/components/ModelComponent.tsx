@@ -21,7 +21,10 @@ interface FormDataStep3 {
 }
 
 const Step1Schema = z.object({
-  selectedOption: z.string().nonempty("Please select an option"),
+  selectedOption: z.string({
+    required_error: "Please select an option",
+    invalid_type_error: "Name must be a string",
+  }).min(1)
 });
 
 const Step2Schema = z.object({
@@ -47,7 +50,6 @@ const ModalComponent: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
   const {
     register,
     handleSubmit,
-    formState: { errors },
     reset,
   } = useForm();
   const backdrop = "blur";
@@ -108,30 +110,29 @@ const ModalComponent: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
       backdrop={backdrop}
       placement="center"
     >
-      <ModalContent className="p-10">
+      <ModalContent className="py-4 px-0 sm:py-8 sm:px-4">
         <>
-          <ModalHeader className="text-[16px] sm:text-[25px] text-center font-medium">
-            Give us a call at{" "}
-            <span className="text-custom-primary px-1">1-800-987-6674</span>, or
-            fill out the form below.
+          <ModalHeader className="text-[16px] sm:text-[25px] text-center font-medium flex flex-col sm:flex-row">
+            Give us a call at <span className="text-custom-primary px-1">1-800-987-6674</span>, or fill out the form below.
           </ModalHeader>
 
           <ModalBody>
             <Separator />
-            <ul>
+            <ul className="flex flex-col sm:flex-row space-2 w-full justify-between">
               {stepTitles.map((title, index) => (
                 <li
                   key={index}
-                  className="flex items-center py-5 text-[16px] sm:text-2xl"
+                  className="flex items-center text-sm sm:text-xl"
                 >
-                  <span className="mr-6 border px-2 rounded-full bg-custom-primary">
+                  <div className={`mr-2 border px-2 rounded-full ${index + 1 <= step ? "bg-custom-primary" : " bg-[#feffba]"}`}>
                     {index + 1}
-                  </span>
+                  </div>
                   {title}
                 </li>
               ))}
             </ul>
             <Separator />
+            {/*@ts-ignore*/}
             <form onSubmit={handleSubmit(onSubmit)}>
               {step === 1 && (
                 <div>
@@ -143,7 +144,7 @@ const ModalComponent: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
                     {...register("selectedOption")}
                     className="bg-[#EBEBD4] text-black w-full rounded-lg p-2 my-5"
                   >
-                    <option value="">I'm a</option>
+                    <option value="">I&apos;m a</option>
                     <option value="Option 1">Option 1</option>
                     <option value="Option 2">Option 2</option>
                     <option value="Option 3">Option 3</option>

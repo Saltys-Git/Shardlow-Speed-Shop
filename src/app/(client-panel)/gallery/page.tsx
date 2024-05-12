@@ -1,7 +1,6 @@
 "use client";
-
 // Global Imports
-import React, { useState } from "react";
+import React from "react";
 import {
   ReactCompareSlider,
   ReactCompareSliderImage,
@@ -12,7 +11,6 @@ import Hero from "@/components/Hero";
 // Native Imports
 
 const Gallery = () => {
-  const [activeLink, setActiveLink] = useState("/");
 
   const items = [
     {
@@ -236,7 +234,7 @@ const Gallery = () => {
         <Hero bgSrc={"/bg.jpg"}>
           <div className="w-full h-full flex items-center justify-center text-center px-10 sm:px-20">
             <h1 className="text-white text-2xl sm:text-6xl leading-snug font-heading font-head tracking-wide">
-              Shardlow Speed Shop ltd and Wheel Refinishing Gallery
+              Shardlow Speed Shop ltd Gallery
             </h1>
           </div>
         </Hero>
@@ -248,11 +246,12 @@ const Gallery = () => {
           <div className="">
             {/* <Tabs className="justify-center items-center min-w-full rounded-xl text-custom-primary "> */}
             <Tabs
+              fullWidth
               classNames={{
-                base: " bg-[#EBEBD4] w-full rounded-xl data-selected:bg-custom-primary ",
-                tabList: "bg-[#EBEBD4]  data-selected:bg-custom-primary",
-                tab: "text-black bg-[#EBEBD4] hover:bg-custom-primary hover:text-white  uppercase text-black text-[5px] sm:text-[15px]  sm:py-2 font-light px-1 sm:px-[51px] justify-between data-selected:bg-custom-primary",
-                tabContent: "hover:text-white ",
+                base: "bg-custom-primary rounded-xl",
+                cursor:" group-data-[selected=true]:bg-custom-primary",
+                tabList: "bg-white",
+                tab: "text-black data-[hover=true]:bg-custom-primary duration-0 uppercase text-black text-[5px] sm:text-[15px] font-light",
               }}
             >
               {" "}
