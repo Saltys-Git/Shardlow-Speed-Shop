@@ -77,7 +77,7 @@ const aboutUs = () => {
             <h1 className="text-[32px] font-head sm:text-[52px]">Our Story</h1>
             <p className="sm:text-[22px] font-light  tracking-wider sm:w-1/2">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              industry. Lorem Ipsum has been the industry&apos;s standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book. It has
               survived not only five centuries, but also the leap into
@@ -93,7 +93,7 @@ const aboutUs = () => {
                 Our Mission
               </h1>
               <p className="sm:text-[18px] font-light sm:container  text-center tracking-wider  py-5">
-                has been the industry's standard dummy text ever since the
+                has been the industry&apos;s standard dummy text ever since the
                 1500s, when an unknown
               </p>
             </div>
@@ -102,7 +102,7 @@ const aboutUs = () => {
                 Our Vision
               </h1>
               <p className="sm:text-[18px] font-light sm:container  text-center tracking-wider  py-5">
-                has been the industry's standard dummy text ever since the
+                has been the industry&apos;s standard dummy text ever since the
                 1500s, when an unknown
               </p>
             </div>
