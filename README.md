@@ -86,44 +86,44 @@ A Wheel &amp; Rim Repair Service in Shardlow, Derby DE72 2HL, United Kingdom
 
 
 ## Menu Structure
-* Home 
-	>Pressable with "/" href
+* Home
+  >Pressable with "/" href
 * Wheel Repair Services
-	>Pressable with "/wheel-repair-services" href & sub-menu list
-	* Sand Blasting 
-		>Pressable with "/wheel-repair-services/sand-blasting" href
-	* Diamond Cutting
-		>Pressable with "/wheel-repair-services/diamond-cutting" href
-	* Crack Repair
-		>Pressable with "/wheel-repair-services/crack-repair" href
-	* Alloy Welding
-		>Pressable with "/wheel-repair-services/alloy-welding" href
-	* Wheel Straightning
-		>Pressable with "/wheel-repair-services/wheel-straightning" href
-	* Curve Repair
-		>Pressable with "/wheel-repair-services/curve-repair" href
-	* Custom or Bespoke Request
-		>Pressable with "/wheel-repair-services/custom-or-bespoke-request" href
+  >Pressable with "/wheel-repair-services" href & sub-menu list
+    * Sand Blasting
+      >Pressable with "/wheel-repair-services/sand-blasting" href
+    * Diamond Cutting
+      >Pressable with "/wheel-repair-services/diamond-cutting" href
+    * Crack Repair
+      >Pressable with "/wheel-repair-services/crack-repair" href
+    * Alloy Welding
+      >Pressable with "/wheel-repair-services/alloy-welding" href
+    * Wheel Straightning
+      >Pressable with "/wheel-repair-services/wheel-straightning" href
+    * Curve Repair
+      >Pressable with "/wheel-repair-services/curve-repair" href
+    * Custom or Bespoke Request
+      >Pressable with "/wheel-repair-services/custom-or-bespoke-request" href
 * Wheel Custom Coloring
-	>Pressable with "/wheel-custom-coloring" href & sub-menu list
-	* Chemical Dip or Strip ("acid dipping" for reference)
-		>Pressable with "/wheel-custom-coloring/chemical-dip" href
-	* Powder Coating
-		>Pressable with "/wheel-custom-coloring/powder-coating" href
+  >Pressable with "/wheel-custom-coloring" href & sub-menu list
+    * Chemical Dip or Strip ("acid dipping" for reference)
+      >Pressable with "/wheel-custom-coloring/chemical-dip" href
+    * Powder Coating
+      >Pressable with "/wheel-custom-coloring/powder-coating" href
 * Our Company
-	>Pressable with sub-menu list
-	* About Us
-		>Pressable with "/about-us" href
-	* Contact Us
-		>Pressable with "/contact-us" href
-	* Careers
-		>Pressable with "/careers" href
-	* Reviews
-		>Pressable with "/reviews" href
+  >Pressable with sub-menu list
+    * About Us
+      >Pressable with "/about-us" href
+    * Contact Us
+      >Pressable with "/contact-us" href
+    * Careers
+      >Pressable with "/careers" href
+    * Reviews
+      >Pressable with "/reviews" href
 * Gallery
-	>Pressable with "/gallery" href
+  >Pressable with "/gallery" href
 * Get a Quote
-	>Popup modal with form & same as MoodBoard Site 2
+  >Popup modal with form & same as MoodBoard Site 2
 
 ## Database Model
 ![](https://app.eraser.io/workspace/ZAdR7ulUFaEI6B3VouxN/preview?elements=51ODcCGx5yA0Wz5CxbvjNA&type=embed)
@@ -133,7 +133,7 @@ A Wheel &amp; Rim Repair Service in Shardlow, Derby DE72 2HL, United Kingdom
 * [TypeScript Style Guide from Google](https://google.github.io/styleguide/tsguide.html)
 * [MoodBoard Site 1](https://www.awrswheelrepair.com)
 * [MoodBoard Site 2](https://wheelsonsite.com/)
-* [UI Design](https://www.figma.com/file/2LezHcfKE9OfcJkR2Ol1n9/Shardlow-Speed-Shop?type=design&mode=design&t=Oj1jXRYdBC3CcLS1-1) 
+* [UI Design](https://www.figma.com/file/2LezHcfKE9OfcJkR2Ol1n9/Shardlow-Speed-Shop?type=design&mode=design&t=Oj1jXRYdBC3CcLS1-1)
 
 ## Branch Details
 * main

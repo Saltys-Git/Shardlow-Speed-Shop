@@ -1,0 +1,46 @@
+const customColoringData = [
+  {
+    Id: "chemical-dip",
+    title: "Custom Color 1 Title",
+    carouselSectionTitle: "Custom Color 1 Title",
+    carouselContentUp: "Custom Color 1 Carousel Content Up",
+    carouselContentDown: "Custom Color 1 Carousel Content Down",
+    carouselImages: [
+      "/custom2.jpg",
+      "/video2.jpg",
+      "/logo2.png",
+      "/custom2.jpg",
+      "/custom2.jpg",
+      "/video2.jpg",
+      "/logo2.png",
+      "/custom2.jpg",
+      "/custom2.jpg",
+      "/video2.jpg",
+      "/logo2.png",
+      "/custom2.jpg",
+    ],
+  },
+  {
+    Id: "powder-coating",
+    title: "Custom Color 2 Title",
+    carouselSectionTitle: "Custom Color 2 Title",
+    carouselContentUp: "Custom Color 2 Carousel Content Up",
+    carouselContentDown: "Custom Color 2 Carousel Content Down",
+    carouselImages: [
+      "/custom2.jpg",
+      "/video2.jpg",
+      "/logo2.png",
+      "/custom2.jpg",
+      "/custom2.jpg",
+      "/video2.jpg",
+      "/logo2.png",
+      "/custom2.jpg",
+      "/custom2.jpg",
+      "/video2.jpg",
+      "/logo2.png",
+      "/custom2.jpg",
+    ],
+  },
+];
+
+export default customColoringData;
