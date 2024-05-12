@@ -11,7 +11,7 @@ import Appointment from "@/components/Appointment";
 import CarouselSection from "@/components/services/CarouselSection";
 import FAQSection from "@/components/services/FAQSection";
 
-const dynamicRepairService = ({
+const DynamicRepairService = ({
   params,
 }: {
   params: {
