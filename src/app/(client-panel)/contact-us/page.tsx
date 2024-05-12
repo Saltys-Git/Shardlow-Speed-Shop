@@ -86,7 +86,7 @@ const contactUs = () => {
                   Contact US
                 </h1>{" "}
                 <h1 className="sm:text-[32px] font-head font-medium">
-                  We'd love to hear from you!
+                  We&apos;d love to hear from you!
                 </h1>
                 <div>
                   <Input
@@ -105,7 +105,7 @@ const contactUs = () => {
                     className="my-3 sm:my-8 rounded-xl tracking-wide  text-[12px]"
                   />
                   <p className="p-2 text-gray-600   tracking-wider text-[12px] sm:text-[15px]">
-                    We'll never share your email with anyone else
+                    We&apos;ll never share your email with anyone else
                   </p>
                   <Separator className="bg-gray-700" />
                   <Textarea
