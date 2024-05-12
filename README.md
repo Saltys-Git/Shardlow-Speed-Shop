@@ -21,68 +21,68 @@ A Wheel &amp; Rim Repair Service in Shardlow, Derby DE72 2HL, United Kingdom
 * Backend - Nextjs Api Routes. (Currently Not Required)
 * Database - Postgresql. (Currently Not Required)
 * Authentication - Clerk. (Currently Not Required)
-* JS Libraries -
-    * React hook form with Shadcn,
-    * Image Slider
-      >[React Compare Slider Library](https://www.npmjs.com/package/react-compare-slider)  with item label as before and after, changePositionOnHover
-    * Nodemailer. (Currently Not Required)
-    * File Chooser
-      >[React Drag and Drop Files](https://www.npmjs.com/package/react-drag-drop-files)
+* JS Libraries - 
+	* React hook form with Shadcn, 
+	* Image Slider 
+		>[React Compare Slider Library](https://www.npmjs.com/package/react-compare-slider)  with item label as before and after, changePositionOnHover
+	* Nodemailer. (Currently Not Required)
+	* File Chooser
+   		>[React Drag and Drop Files](https://www.npmjs.com/package/react-drag-drop-files)
 
 ## Initial Folder Structure
 * Root
-    * public
-        * images
-            * All images will go here
-    * src
-        * app
-            * api
-                * send-mail
-                    * route.tsx
-                * upload-image
-                    * route.tsx
-            * (image-upload-panel)
-                * upload
-                    * page.tsx
-                    * ...comps
-                * signin
-                    * page.tsx
-                    * ...comps
-                * layout.tsx
-            * (client-panel)
-                * wheel-repair-services
-                    * [...service]
-                        * page.tsx
-                    * page.tsx
-                * wheel-custom-coloring
-                    * [...service]
-                        * page.tsx
-                    * page.tsx
-                * about-us
-                    * page.tsx
-                * contact-us
-                    * page.tsx
-                * careers
-                    * page.tsx
-                * reviews
-                    * page.tsx
-                * gallery
-                    * page.tsx
-                * terms-and-conditions
-                    * page.tsx
-                * privacy-policy
-                    * page.tsx
-                * favicon.ico
-                * globals.css
-                * Navbar.tsx
-                * Footer.tsx
-                * layout.tsx
-                * page.tsx
-        * components
-            * GetQuoteComp.tsx
-            * ImageSlider.tsx
-        * lib
-    * ...Root folder files
+	* public
+		* images
+			* All images will go here
+	* src
+		* app
+			* api
+				* send-mail
+					* route.tsx
+  				* upload-image
+					* route.tsx
+			* (image-upload-panel)
+				* upload
+					* page.tsx
+					* ...comps
+				* signin
+					* page.tsx
+					* ...comps
+				* layout.tsx
+			* (client-panel)
+				* wheel-repair-services
+					* [...service]
+						* page.tsx
+					* page.tsx
+				* wheel-custom-coloring
+					* [...service]
+						* page.tsx
+					* page.tsx
+				* about-us
+					* page.tsx
+				* contact-us
+					* page.tsx
+				* careers
+					* page.tsx
+				* reviews
+					* page.tsx
+				* gallery
+					* page.tsx
+				* terms-and-conditions
+					* page.tsx
+				* privacy-policy
+					* page.tsx
+				* favicon.ico
+				* globals.css
+				* Navbar.tsx
+				* Footer.tsx
+				* layout.tsx
+				* page.tsx
+		* components 
+			* GetQuoteComp.tsx
+   			* ImageSlider.tsx 
+		* lib
+	* ...Root folder files
 
 
 ## Menu Structure
